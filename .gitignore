@@ -1,0 +1,26 @@
+.gitconfig
+.swt/
+3D Objects/
+AppData/
+Contacts/
+Desktop/
+Documents/
+Downloads/
+Favorites/
+IntelGraphicsProfiles/
+Links/
+MicrosoftEdgeBackups/
+Music/
+NTUSER.DAT
+NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TM.blf
+NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TMContainer00000000000000000001.regtrans-ms
+NTUSER.DAT{8ebe95f7-3dcb-11e8-a9d9-7cfe90913f50}.TMContainer00000000000000000002.regtrans-ms
+OneDrive/
+Pictures/
+Saved Games/
+Searches/
+Videos/
+ntuser.dat.LOG1
+ntuser.dat.LOG2
+ntuser.ini
+source/
