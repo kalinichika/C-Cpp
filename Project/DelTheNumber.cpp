@@ -11,8 +11,8 @@ using std::endl;
 using std::getchar;
 
 
-vector <int>& delNum(vector <int>& v, int a) {
-	if (v.empty()) return v;
+void delNum(vector <int>& v, int a) {
+	if (v.empty()) return ;
 	int f = 0;
 	for (int i = 0; i < v.size(); i++) {
 		if (v[i] == a) {
@@ -22,16 +22,16 @@ vector <int>& delNum(vector <int>& v, int a) {
 		}
 	}
 	if (f == 0) cout << "This element is not in the vector.\n";
-	return v;
+	return ;
 }
 
-vector <int>& init(vector <int>& v) {
+void init(vector <int>& v) {
 	cout << "Enter the elements of the vector : \n";
 	for (int i = 0; i < v.size(); i++) {
 		cout << "v[" << i << "] = ";
 		cin >> v[i];
 	}
-	return v;
+	return ;
 }
 
 void print(const vector <int>& v) {
@@ -50,14 +50,14 @@ int main()
 		cin >> N;
 	}
 	vector <int> v(N);
-	v = init(v);
+	init(v);
 	print(v);
 
 	cout << "Enter the number to be deleted : ";
 	int a;
 	cin >> a;
 
-	v = delNum(v, a);
+	delNum(v, a);
 	print(v);
 	system("pause");
 	return 0;
