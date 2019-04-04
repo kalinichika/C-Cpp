@@ -1,9 +1,14 @@
 #include <iostream>
+#include <fstream>
+#include <ctime>
+#include <iomanip>
 #include "cpp_lang_task1.h"
 
 using std::cout;
 using std::endl;
 using std::move;
+using std::setw;
+using std::ofstream;
 
 using namespace student;
 
@@ -233,7 +238,7 @@ void string::print() {
 }
 
 
-void Test1() {
+void Test1_string() {
     cout << "\n...Конструктор по умолчанию (string mystr)...\n";
     string mystr;
     cout << "My string = \"";
@@ -309,7 +314,7 @@ void Test1() {
     cout << endl;
 }
 
-void Test2() {
+void Test2_string() {
     string str = "Viktoriya Vladislavovna Kalinina";
     cout << "\n...Функция substr...\n";
     cout << "My string = \"";
@@ -373,11 +378,65 @@ void Test2() {
     cout << "\", size = " << str1.size() << endl;
 }
 
+void print_number_table (short col, short row){
+
+    ofstream fout;
+    fout.open("Projects/cpp_lang_task1/table.log");
+    srand(time(NULL));
+
+    cout << " ";
+    fout << " ";
+    for(int j = 0; j < col*4-1; j++) {
+        cout << "*";
+        fout << "*";
+    }
+    cout << endl;
+    fout << endl;
+    for (int i = 0; i < row; i++) {
+        for (int j = 0; j < col; j++) {
+            unsigned int x = rand() % 999 + 0;;
+            cout << "|";
+            cout << setw(3) << x;
+            fout << "|";
+            fout << setw(3) << x;
+        }
+        cout << "|\n";
+        fout << "|\n";
+        if (i<row-1) {
+            cout << "|";
+            fout << "|";
+        }
+        for (int j = 0; (j < col-1)&(i<row-1); j++) {
+            cout << "---+";
+            fout << "---+";
+        }
+        if (i<row-1) {
+            cout << "---|\n";
+            fout << "---|\n";
+        }
+    }
+    cout << " ";
+    fout << " ";
+    for (int j = 0; j < col*4-1; j++) {
+        cout << "*";
+        fout << "*";
+    }
+    cout << "\n";
+    fout << "\n";
+    fout.close();
+}
+
+void Test0_table(){
+    print_number_table(3,6);
+    print_number_table(5,2);
+    print_number_table(1,1);
+}
 
 int main()
 {
     //setlocale(LC_ALL, "Russian");
-    Test1();
-    Test2();
+    Test0_table();
+    //Test1_string();
+    //Test2_string();
     return 0;
 }
