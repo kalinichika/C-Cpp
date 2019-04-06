@@ -7,7 +7,6 @@ namespace student{
     class string {
         char* _data;
         unsigned int _size;
-        unsigned int _lenght = 0;
         static const unsigned int npos = -1;
     public:
         ~string();
@@ -27,7 +26,6 @@ namespace student{
         const char* data () const;
         bool empty ();
         unsigned int size () const;
-        unsigned int length() const;
         void clear ();
         void push_back (char ch);
         void pop_back ();
@@ -49,10 +47,11 @@ namespace student{
         vector();
         vector(const vector& other);
         vector(vector&& other);
+        explicit vector(int count);
         explicit vector(unsigned int count, const T& val = T());
-        explicit vector(unsigned int count);
-        T& operator[] (unsigned int pos);
-        const T& operator[] (unsigned int pos) const;
+        T& operator[] (int pos);
+        const T& operator[] (int pos) const;
+        unsigned int size();
         T* data();
         const T* data() const;
         bool empty() const;
@@ -61,6 +60,7 @@ namespace student{
         void push_back(T&& value);
         void pop_back();
         void insert( unsigned int pos, unsigned int count, const T& value);
+        void print();
     };
 }
 #endif // CPP_LANG_TASK1_H
