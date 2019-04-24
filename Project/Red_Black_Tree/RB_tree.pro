@@ -4,7 +4,7 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    student.cpp
+    student_RBTree.cpp
 
 HEADERS += \
-    student.h
+    student_RBTree.h
