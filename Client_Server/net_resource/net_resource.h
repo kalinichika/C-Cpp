@@ -12,10 +12,14 @@
 #include <errno.h>
 #include <unistd.h>
 
+#include <stdio.h>
+#include <stdarg.h>
+
 namespace Client_Server{
 
     class net_resource{
     protected:
+
         int s;
         struct sockaddr_in sock_addr;
 
@@ -23,7 +27,7 @@ namespace Client_Server{
         virtual ~net_resource() = default;
 
         int Socket() noexcept(false);
-        void SockAddr(int port = 12345);
+        void SockAddr(const int port = 12345);
         void Close();
     };
 
@@ -37,9 +41,9 @@ namespace Client_Server{
         Bad_C_S_exception(const Bad_C_S_exception& other) = delete;
         Bad_C_S_exception operator = (Bad_C_S_exception&& other) = delete;
         Bad_C_S_exception operator = (const Bad_C_S_exception& other) = delete;
-        ~Bad_C_S_exception() = default;\
+        ~Bad_C_S_exception() = default;
 
-        inline const std::string what() { return error; }
+        inline const std::string what(){ return error; }
     };
 
 }

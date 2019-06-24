@@ -14,7 +14,7 @@ int net_resource::Socket()
 }
 
 // ОПРЕДЕЛЯЕМ ПРОСЛУШИВАЕМЫЙ ПОРТ И АДРЕС
-void net_resource::SockAddr(int port){
+void net_resource::SockAddr(const int port){
     sock_addr.sin_family = AF_INET;
     sock_addr.sin_port = htons(port);
     sock_addr.sin_addr.s_addr = htonl(INADDR_LOOPBACK);
@@ -28,5 +28,3 @@ void net_resource::Close()
 Bad_C_S_exception::Bad_C_S_exception(const std::string e) : error(e){}
 
 Bad_C_S_exception::Bad_C_S_exception(Bad_C_S_exception&& other) : error(other.what()){}
-
-

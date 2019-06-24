@@ -2,7 +2,6 @@
 
 int main()
 {
-
     try {
         // СОЗДАНИЕ СЕРВЕРА С ПАРАМЕТРОМ (port)
         // по умолчанию port = 12345
@@ -14,10 +13,9 @@ int main()
 
         char message2[] = "My name is Viktoriya.";
         Server.Send(sizeof(message2), message2);
-
     }
     catch(Client_Server::Bad_C_S_exception &error){
-        std::cout<<error.what()<<std::endl;
+        std::cout << error.what() << std::endl;
     }
     return 0;
 }
