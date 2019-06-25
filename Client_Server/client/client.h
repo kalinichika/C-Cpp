@@ -6,21 +6,23 @@
 
 namespace Client_Server{
 
-class client : public net_resource
-{
-public:
-    client (int port = 12345) noexcept(false);
-    ~client() noexcept;
+    class client : public net_resource
+    {
+    public:
+        client (int port = 12345) noexcept(false);
+        ~client() noexcept;
+        void Recv() const noexcept;
+    private:
+        void Connect() const;
+        int findErrRecv(int) const;
+        Log *pLog = new Log(LogFileName);
+        time_t lt = time(NULL);
 
-    void Recv() const noexcept;
-
-private:
-    void Connect() const;
-    int findErrRecv(int) const;
-
-    Log *pLog = new Log("/home/student/Study/Client_Server/log.txt");
-    time_t lt = time(NULL);
-};
+        client(const client &other) = delete;
+        client(client &other) = delete;
+        client operator = (const client &other) = delete;
+        client operator = (client &&other) = delete;
+    };
 
 }
 #endif // CLIENT_H

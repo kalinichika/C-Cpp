@@ -12,14 +12,17 @@
 #include <errno.h>
 #include <unistd.h>
 
-#include <stdio.h>
 #include <stdarg.h>
 
 namespace Client_Server{
 
     class net_resource{
+    private:
+        net_resource(const net_resource &other) = delete;
+        net_resource(net_resource &&other) = delete;
+        net_resource operator = (const net_resource &other) = delete;
+        net_resource operator = (net_resource &&other) = delete;
     protected:
-
         int s;
         struct sockaddr_in sock_addr;
 
@@ -33,16 +36,9 @@ namespace Client_Server{
 
     class Bad_C_S_exception : public std::exception {
         const std::string error;
-
     public:
         Bad_C_S_exception(const std::string);
-
         Bad_C_S_exception(Bad_C_S_exception&& other);
-        Bad_C_S_exception(const Bad_C_S_exception& other) = delete;
-        Bad_C_S_exception operator = (Bad_C_S_exception&& other) = delete;
-        Bad_C_S_exception operator = (const Bad_C_S_exception& other) = delete;
-        ~Bad_C_S_exception() = default;
-
         inline const std::string what(){ return error; }
     };
 
