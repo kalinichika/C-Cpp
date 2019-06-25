@@ -6,7 +6,7 @@ Log::Log(const std::string FileName) {
     m_stream.open(FileName,std::ios::app);
 }
 
-void Log::Write(const char* LogLine, ...) {
+void Log::Write(const char* LogLine, ...) noexcept {
     va_list argList;
     char cbuffer[1024];
     va_start(argList, LogLine);

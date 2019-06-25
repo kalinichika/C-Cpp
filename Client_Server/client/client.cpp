@@ -19,6 +19,7 @@ client::~client() noexcept
 {
     //РАЗРЫВ СОЕДИНЕНИЯ И ЗАКРЫТИЕ СОКЕТА
     pLog->Write("Disonnect\t | (Client) | \t%s",ctime(&lt));
+    pLog->Write("*****************************************************\n");
     Close();
 }
 

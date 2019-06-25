@@ -1,82 +1,90 @@
-Bind		 | (Server) | 	Fri Apr 13 02:48:57 4442192
+Bind		 | (Server) | 	Tue Jun 25 17:21:40 2019
 
-Listen		 | (Server) | 	Fri Apr 13 02:48:57 4442192
+Listen		 | (Server) | 	Tue Jun 25 17:21:40 2019
 
-Bind		 | (Server) | 	Wed Jun 11 02:06:17 4452769
+Connect		 | (Client) | 	Tue Jun 25 17:21:44 2019
 
-Listen		 | (Server) | 	Wed Jun 11 02:06:17 4452769
+Accept		 | (Server) | 	Tue Jun 25 17:21:40 2019
 
-Accept		 | (Server) | 	Wed Jun 11 02:06:17 4452769
+Send length	 | (Server) | 	Tue Jun 25 17:21:40 2019
 
-Send length	 | (Server) | 	Wed Jun 11 02:06:17 4452769
+Send message	 | (Server) | 	Tue Jun 25 17:21:40 2019
 
-Send message	 | (Server) | 	Wed Jun 11 02:06:17 4452769
+Send length	 | (Server) | 	Tue Jun 25 17:21:40 2019
 
-Send length	 | (Server) | 	Wed Jun 11 02:06:17 4452769
+Send message	 | (Server) | 	Tue Jun 25 17:21:40 2019
 
-Send message	 | (Server) | 	Wed Jun 11 02:06:17 4452769
+Disconnect	 | (Server) | 	Tue Jun 25 17:21:40 2019
 
-Disconnect	 | (Server) | 	Wed Jun 11 02:06:17 4452769
+Receive length	 | (Client) | 	Tue Jun 25 17:21:44 2019
 
-Connect		 | (Client) | 	Sun Apr 30 04:19:33 2990519
-
-Receive length	 | (Client) | 	Sun Apr 30 04:19:33 2990519
-
-Receive message	 | (Client) | 	Sun Apr 30 04:19:33 2990519
+Receive message	 | (Client) | 	Tue Jun 25 17:21:44 2019
 
 MESSAGE: Hello my friend!
 
-Disonnect	 | (Client) | 	Sun Apr 30 04:19:33 2990519
+Disonnect	 | (Client) | 	Tue Jun 25 17:21:44 2019
 
-Bind		 | (Server) | 	Thu Feb 11 10:02:01 4446704
+*****************************************************
 
-Listen		 | (Server) | 	Thu Feb 11 10:02:01 4446704
+Bind		 | (Server) | 	Tue Jun 25 19:47:18 2019
 
-Accept		 | (Server) | 	Thu Feb 11 10:02:01 4446704
+Listen		 | (Server) | 	Tue Jun 25 19:47:18 2019
 
-Send length	 | (Server) | 	Thu Feb 11 10:02:01 4446704
+Accept		 | (Server) | 	Tue Jun 25 19:47:18 2019
 
-Send message	 | (Server) | 	Thu Feb 11 10:02:01 4446704
+Send length	 | (Server) | 	Tue Jun 25 19:47:18 2019
 
-Send length	 | (Server) | 	Thu Feb 11 10:02:01 4446704
+Send message	 | (Server) | 	Tue Jun 25 19:47:18 2019
 
-Send message	 | (Server) | 	Thu Feb 11 10:02:01 4446704
+Send length	 | (Server) | 	Tue Jun 25 19:47:18 2019
 
-Disconnect	 | (Server) | 	Thu Feb 11 10:02:01 4446704
+Send message	 | (Server) | 	Tue Jun 25 19:47:18 2019
 
-Connect		 | (Client) | 	Tue May 30 01:07:33 2985628
+Disconnect	 | (Server) | 	Tue Jun 25 19:47:18 2019
 
-Receive length	 | (Client) | 	Tue May 30 01:07:33 2985628
+Connect		 | (Client) | 	Tue Jun 25 19:47:21 2019
 
-Receive message	 | (Client) | 	Tue May 30 01:07:33 2985628
+Receive length	 | (Client) | 	Tue Jun 25 19:47:21 2019
 
-MESSAGE: Hello my friend!
-
-Disonnect	 | (Client) | 	Tue May 30 01:07:33 2985628
-
-Bind		 | (Server) | 	Mon Jun 24 19:48:36 2019
-
-Listen		 | (Server) | 	Mon Jun 24 19:48:36 2019
-
-Connect		 | (Client) | 	Mon Jun 24 19:48:39 2019
-
-Accept		 | (Server) | 	Mon Jun 24 19:48:36 2019
-
-Send length	 | (Server) | 	Mon Jun 24 19:48:36 2019
-
-Send message	 | (Server) | 	Mon Jun 24 19:48:36 2019
-
-Send length	 | (Server) | 	Mon Jun 24 19:48:36 2019
-
-Send message	 | (Server) | 	Mon Jun 24 19:48:36 2019
-
-Disconnect	 | (Server) | 	Mon Jun 24 19:48:36 2019
-
-Receive length	 | (Client) | 	Mon Jun 24 19:48:39 2019
-
-Receive message	 | (Client) | 	Mon Jun 24 19:48:39 2019
+Receive message	 | (Client) | 	Tue Jun 25 19:47:21 2019
 
 MESSAGE: Hello my friend!
 
-Disonnect	 | (Client) | 	Mon Jun 24 19:48:39 2019
+Disonnect	 | (Client) | 	Tue Jun 25 19:47:21 2019
+
+*****************************************************
+
+Bind		 | (Server) | 	Tue Jun 25 20:02:24 2019
+
+Listen		 | (Server) | 	Tue Jun 25 20:02:24 2019
+
+Bind		 | (Server) | 	Tue Jun 25 20:03:15 2019
+
+Listen		 | (Server) | 	Tue Jun 25 20:03:15 2019
+
+Accept		 | (Server) | 	Tue Jun 25 20:03:15 2019
+
+Connect		 | (Client) | 	Tue Jun 25 20:03:18 2019
+
+Send length	 | (Server) | 	Tue Jun 25 20:03:15 2019
+
+Send message	 | (Server) | 	Tue Jun 25 20:03:15 2019
+
+Send length	 | (Server) | 	Tue Jun 25 20:03:15 2019
+
+Send message	 | (Server) | 	Tue Jun 25 20:03:15 2019
+
+Disconnect	 | (Server) | 	Tue Jun 25 20:03:15 2019
+
+Receive length	 | (Client) | 	Tue Jun 25 20:03:18 2019
+
+Receive message	 | (Client) | 	Tue Jun 25 20:03:18 2019
+
+MESSAGE: Hello my friend!
+
+Disonnect	 | (Client) | 	Tue Jun 25 20:03:18 2019
+
+*****************************************************
+
+Error calling connect	 | (Client) | 	Tue Jun 25 20:03:21 2019
 

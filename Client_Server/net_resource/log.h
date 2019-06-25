@@ -11,8 +11,8 @@ namespace Client_Server{
     class Log {
     public:
         Log(const std::string FileName);
-        ~Log();
-        void Write(const char* LogLine, ...);
+        ~Log() noexcept;
+        void Write(const char* LogLine, ...) noexcept;
     private:
         std::ofstream m_stream;
     };
