@@ -20,9 +20,7 @@
 
 #include <stdarg.h>
 
-
-#define MAX_EVENTS 32
-//#define EPOLL_SIZE 100
+#define MAX_EVENTS 1024
 
 namespace JSON_CS
 {
@@ -42,7 +40,7 @@ namespace JSON_CS
         virtual ~net_resource() = default;
 
         int Socket() noexcept(false);
-        void SockAddr(const int port = 12345);
+        void SockAddr();
         void Close();
         int Set_NonBlock(int);
     };

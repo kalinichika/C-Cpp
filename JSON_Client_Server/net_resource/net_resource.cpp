@@ -18,8 +18,8 @@ int net_resource::Set_NonBlock(int sfd)
         throw(Bad_C_S_exception("Error in SetNonBlock - fcntl - 2"));
         return -1;
     }
-
     return 0;*/
+
     int flags;
     #ifdef O_NONBLOCK
         if ( (flags = fcntl(sfd, F_GETFL, 0)) == -1 ) {
@@ -45,10 +45,10 @@ int net_resource::Socket()
 }
 
 // ОПРЕДЕЛЯЕМ ПРОСЛУШИВАЕМЫЙ ПОРТ И АДРЕС
-void net_resource::SockAddr(const int port)
+void net_resource::SockAddr()
 {
     sock_addr.sin_family = AF_INET;
-    sock_addr.sin_port = htons(port);
+    sock_addr.sin_port = htons(12345);
     sock_addr.sin_addr.s_addr = htonl(INADDR_ANY);
 }
 

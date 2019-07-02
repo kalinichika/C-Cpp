@@ -1,13 +1,13 @@
 #include "jsonserver.h"
 using namespace JSON_CS;
 
-server::server(const int port) noexcept(false)
+server::server(unsigned int port) noexcept(false)
 {
         // СОЗДАЕМ СОКЕТ
         Socket();
 
         // ОПРЕДЕЛЯЕМ ПРОСЛУШИВАЕМЫЙ ПОРТ И АДРЕС
-        SockAddr(port);
+        SockAddr();
         Bind();
 
         // Неблокирующий режим
@@ -41,7 +41,7 @@ void server::Bind() const
 
 void server::Listen() const
 {
-    if( listen(s, 5) )
+    if( listen(s, SOMAXCONN) ) // SOMAXCONN - максимальное кол соединений, поддерживаемых системой.
     {
         pLog->Write("Error calling Listen\t | (Server) | \t%s",ctime(&lt));
         throw("Error calling listen");
@@ -59,6 +59,7 @@ void server::Accept()
 
 void server::f_EPOLL()
 {
+    unsigned int count_client = 0;
     // Задаем дескриптор epoll
     int EPoll;
     if( (EPoll = epoll_create1(0)) < 0 )
@@ -66,7 +67,7 @@ void server::f_EPOLL()
         pLog->Write("Error in epol_create\t | (Server) | \t%s",ctime(&lt));
         throw(Bad_C_S_exception("Error in epoll_create"));
     }
-    pLog->Write("Epol_create\t | (Server) | \t%s",ctime(&lt));
+    //pLog->Write("Epol_create\t | (Server) | \t%s",ctime(&lt));
 
     // Зарегистрируем s в epoll
     struct epoll_event Event;
@@ -80,7 +81,7 @@ void server::f_EPOLL()
         pLog->Write("Error in epol_ctl\t | (Server) | \t%s",ctime(&lt));
         throw(Bad_C_S_exception("Error in epoll_ctl"));
     }
-    pLog->Write("Epol_ctl\t | (Server) | \t%s",ctime(&lt));
+    //pLog->Write("Epol_ctl\t | (Server) | \t%s",ctime(&lt));
 
 
     while(1){
@@ -92,12 +93,12 @@ void server::f_EPOLL()
             pLog->Write("Error in epol_wait\t | (Server) | \t%s",ctime(&lt));
             throw(Bad_C_S_exception("Error in epoll_wait"));
         }
-        pLog->Write("Epol_wait\t | (Server) | \t%s",ctime(&lt));
+        //pLog->Write("Epol_wait\t | (Server) | \t%s",ctime(&lt));
 
         // пробегаемся по тем событиям, которые гарантированно отработали
         for( int i = 0; i < N; i++ )
         {
-            pLog->Write("i = %d\t\t | (Server) | \t%s",i,ctime(&lt));
+            //pLog->Write("i = %d\t\t | (Server) | \t%s",i,ctime(&lt));
 
             if ((Events[i].events & EPOLLERR) ||
                     (Events[i].events & EPOLLHUP) ||
@@ -112,9 +113,6 @@ void server::f_EPOLL()
             {
                 while(1)
                 {
-
-
-
                     struct sockaddr in_addr;
                     socklen_t in_len;
                     char hbuf[NI_MAXHOST], sbuf[NI_MAXSERV];
@@ -122,14 +120,12 @@ void server::f_EPOLL()
 
                     new_s = accept(s, &in_addr, &in_len);
 
-
-
                     if( new_s < 0 )
                     {
                         if ((errno == EAGAIN) ||(errno == EWOULDBLOCK))
                         {
-                            pLog->Write("processed all incoming connections.\t | (Server) | \t%s",ctime(&lt));
-                            printf ("processed all incoming connections.\n");
+                            //pLog->Write("processed all incoming connections.\t | (Server) | \t%s",ctime(&lt));
+                            //printf ("processed all incoming connections.\n");
                             break;
                         }
                         else
@@ -140,7 +136,7 @@ void server::f_EPOLL()
 
                         }
                     }
-                    pLog->Write("Accept\t\t | (Server) | \t%s",ctime(&lt));
+                    //pLog->Write("Accept\t\t | (Server) | \t%s",ctime(&lt));
 
                     int x = getnameinfo (&in_addr, in_len,
                                  hbuf, sizeof hbuf,
@@ -148,20 +144,14 @@ void server::f_EPOLL()
                                  NI_NUMERICHOST | NI_NUMERICSERV);
                     if ( x == 0 )
                     {
-                        printf("Accepted connection on descriptor %d (host=%s, port=%s)\n", new_s, hbuf, sbuf);
+                        //printf("Accepted connection on descriptor %d (host=%s, port=%s)\n", new_s, hbuf, sbuf);
                     }
 
-                    // делаем его неблокирующим
-                    //if( new_s > 0)
-                    //{
-                        if ( Set_NonBlock(this->new_s) < 0 )
-                        {
-                            printf("\nABORT\n");
-                            abort();
-                        }
-                    //}
-
-
+                    if ( Set_NonBlock(this->new_s) < 0 )
+                    {
+                        //printf("\nABORT\n");
+                        abort();
+                    }
 
 
                     Event.data.fd = new_s;
@@ -176,7 +166,7 @@ void server::f_EPOLL()
             }
             else
             {
-                pLog->Write("Buffer\t\t | (Server) | \t%s",ctime(&lt));
+                //pLog->Write("Buffer\t\t | (Server) | \t%s",ctime(&lt));
                 char Buffer[1024];
                 memset(Buffer, 0, 1024);
                 int RecvResult = recv(Events[i].data.fd, Buffer, 1024, 0);
@@ -188,8 +178,8 @@ void server::f_EPOLL()
                 }
                 else if( RecvResult >0 )
                 {
-                    printf("Recv : \"%s\" | (Server) | \t%s", Buffer, ctime(&lt));
-                    pLog->Write("Recv : \"%s\" | (Server) | \t%s", Buffer, ctime(&lt));
+                    //printf("Recv : \"%s\" | ( from Client %d) | \t%s", Buffer, count_client++, ctime(&lt));
+                    pLog->Write("Recv : \"%s\" | ( from Client %d) | \t%s", Buffer, count_client++, ctime(&lt));
 
                     send(Events[i].data.fd, Buffer, RecvResult, 0);
                 }

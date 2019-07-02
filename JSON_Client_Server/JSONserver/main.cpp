@@ -6,7 +6,7 @@ int main()
     {
         // СОЗДАНИЕ СЕРВЕРА С ПАРАМЕТРОМ (port)
         // по умолчанию port = 12345
-        JSON_CS::server Server(5555);
+        JSON_CS::server Server(12345);
         //Server.Rec();
 
     }
@@ -14,5 +14,6 @@ int main()
     {
         std::cout << error.what() << std::endl;
     }
+
     return 0;
 }

@@ -10,7 +10,7 @@ namespace JSON_CS
     class server : public net_resource
     {
     public:
-        server(const int port = 12345) noexcept(false);
+        server(unsigned int port = 12345) noexcept(false);
         ~server() noexcept;
     private:
         void Bind() const;
