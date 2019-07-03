@@ -14,7 +14,7 @@ private:
     int s;
     int new_s;
     int EPoll;
-    int N;
+    int N=1;
     struct epoll_event Event;
     struct epoll_event Events[MAX_EVENTS];
     unsigned int count_client = 0;

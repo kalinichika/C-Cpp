@@ -1,6 +1,29 @@
 #include "net_resource.h"
 using namespace JSON_CS;
 
+// СОЗДАЕМ СОКЕТ
+int net_resource::createSocket()
+{
+    s = socket(AF_INET, SOCK_STREAM, 0);
+    if(s < 0)
+    {
+        if(errno==EMFILE) perror("EMFILE");
+        throw(Bad_C_S_exception("Error calling socket"));
+        return 0;
+    }
+    return s;
+}
+
+// ОПРЕДЕЛЯЕМ ПРОСЛУШИВАЕМЫЙ ПОРТ И АДРЕС
+sockaddr_in net_resource::SockAddr()
+{
+    sockaddr_in sa;
+    sa.sin_family = AF_INET;
+    sa.sin_port = htons(DEFAULT_PORT);
+    sa.sin_addr.s_addr = htonl(INADDR_ANY);
+    return sa;
+}
+
 int net_resource::Set_NonBlock(int sfd)
 {
     /*int flags;
@@ -33,27 +56,6 @@ int net_resource::Set_NonBlock(int sfd)
     #endif
 }
 
-// СОЗДАЕМ СОКЕТ
-int net_resource::createSocket()
-{
-    s = socket(AF_INET, SOCK_STREAM, 0);
-    if(s < 0)
-    {
-        throw(Bad_C_S_exception("Error calling socket"));
-        return 0;
-    }
-    return s;
-}
-
-// ОПРЕДЕЛЯЕМ ПРОСЛУШИВАЕМЫЙ ПОРТ И АДРЕС
-sockaddr_in net_resource::SockAddr()
-{
-    sockaddr_in sa;
-    sa.sin_family = AF_INET;
-    sa.sin_port = htons(DEFAULT_PORT);
-    sa.sin_addr.s_addr = htonl(INADDR_ANY);
-    return sa;
-}
 
 void net_resource::Close(int fd)
 {

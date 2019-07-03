@@ -7,10 +7,14 @@ create_epoll::create_epoll(int sock) : s(sock), EPoll(epoll_create1(0)), Event(s
 
     // Регистрируем (добавляем дескр в epoll)
     er_epoll_ctl(this->s);
+
     set_epoll_wait();
 }
 
-create_epoll::~create_epoll(){}
+create_epoll::~create_epoll()
+{
+
+}
 
 epoll_event create_epoll::set_Event()
 {
@@ -22,10 +26,12 @@ epoll_event create_epoll::set_Event()
 
 void create_epoll::set_epoll_wait()
 {
-    while(1)
+    while(N)
     {
         // Ожидаем событие
-        N = epoll_wait(EPoll, Events, MAX_EVENTS, -1); // -1 - вечное ожидание
+        N = epoll_wait(EPoll, Events, MAX_EVENTS, 10000 ); // последний аргумент -1
+                                                           //- вечное ожидание,
+                                                           //тогда while(1)
         er_epoll_wait();
 
         // пробегаемся по тем событиям, которые гарантированно отработали
@@ -50,7 +56,9 @@ void create_epoll::set_epoll_wait()
             {
                 Work(i);
             }
+        Close(Events[i].data.fd);
         }
+        if (N==0) return;
     }
 }
 
@@ -188,9 +196,16 @@ int create_epoll::er_accept(){
             //printf ("processed all incoming connections.\n");
             return -1;
         }
+        else if((errno == EMFILE))
+        {
+            perror("EMFILE ");
+            pLog->Write("Error calling Accept\t | (Server) | \t%s", ctime(&lt));
+            throw(Bad_C_S_exception("Error calling accept"));
+            return -1;
+        }
         else
         {
-            pLog->Write("Error calling Accept\t | (Server) | \t%s",ctime(&lt));
+            pLog->Write("Error calling Accept\t | (Server) | \t%s", ctime(&lt));
             throw(Bad_C_S_exception("Error calling accept"));
             return -1;
         }

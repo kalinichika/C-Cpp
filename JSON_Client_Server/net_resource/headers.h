@@ -20,4 +20,6 @@
 
 #include "/home/student/Projects/JSON_CS/net_resource/bad_c_s_exception.h"
 #include "/home/student/Projects/JSON_CS/net_resource/log.h"
+#include "/home/student/Projects/JSON_CS/net_resource/cJSON.h"
+
 #endif // HEADERS_H

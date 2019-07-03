@@ -1,4 +1,4 @@
-#include "jsonclient.h"
+#include "/home/student/Projects/JSON_CS/JSONclient/jsonclient.h"
 using namespace JSON_CS;
 
 client::client() noexcept(false)
@@ -10,7 +10,7 @@ client::client() noexcept(false)
 client::~client() noexcept
 {
     //РАЗРЫВ СОЕДИНЕНИЯ И ЗАКРЫТИЕ СОКЕТА
-    //pLog->Write("Disonnect\t |(Client %d)| \t%s", num, ctime(&lt));
+    //pLog->Write("Disonnect\t | (Client) | \t%s",ctime(&lt));
     Close(s);
 }
 
@@ -21,15 +21,15 @@ void client::Connect() const
         pLog->Write("Error calling connect\t | (Client) | \t%s",ctime(&lt));
         throw(Bad_C_S_exception("Error calling connect"));
     }
-    //pLog->Write("Connect\t\t |(Client %d)| \t%s", num, ctime(&lt));
+    //pLog->Write("Connect\t\t | (Client) | \t%s",ctime(&lt));
 }
 
 void client::Send() const noexcept
 {
     std::string  Buffer(ctime(&lt));
     send(s, &Buffer[0], sizeof(Buffer), 0);
-    //pLog->Write("Send message\t |(Client %d)| \t%s", num, ctime(&lt));
-    //printf("Send message\t |(Client %d)| \t%s", num, ctime(&lt));
+    //pLog->Write("Send message\t | (Client) | \t%s", ctime(&lt));
+    //printf("Send message\t | (Client) | \t%s", ctime(&lt));
 }
 
 void client::Recv() const noexcept
@@ -39,11 +39,11 @@ void client::Recv() const noexcept
     int RecvResult = recv(s, Buffer, 1024, 0);
     if ( RecvResult < 0 )
     {
-        pLog->Write("Error Recv\t |(Client %d)| \t%s", num, ctime(&lt));
+        pLog->Write("Error Recv\t | (Client) | \t%s", ctime(&lt));
     }
     else {
         printf("Recv : %s", Buffer);
-        //pLog->Write("Recv : \"%s\" |(Client %d)| \t%s", Buffer, num, ctime(&lt));
+        //pLog->Write("Recv : \"%s\" | (Client) | \t%s", Buffer, ctime(&lt));
     }
 }
 

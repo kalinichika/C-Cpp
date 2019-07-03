@@ -4,8 +4,6 @@
 #include "/home/student/Projects/JSON_CS/net_resource/net_resource.h"
 #include "/home/student/Projects/JSON_CS/net_resource/create_epoll.h"
 
-#define MAX_EVENTS 10000
-
 namespace JSON_CS
 {
 
@@ -20,8 +18,6 @@ private:
     void Bind() const;
     void Listen() const;
     void f_EPOLL();
-
-    int new_s;
 
     server(const server &other) = delete;
     server(server &&other) = delete;

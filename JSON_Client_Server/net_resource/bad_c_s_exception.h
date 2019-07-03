@@ -1,7 +1,7 @@
 #ifndef BAD_C_S_EXCEPTION_H
 #define BAD_C_S_EXCEPTION_H
 
-#include "headers.h"
+#include "/home/student/Projects/JSON_CS/net_resource/headers.h"
 
 namespace JSON_CS
 {

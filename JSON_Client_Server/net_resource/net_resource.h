@@ -1,7 +1,7 @@
 #ifndef NET_RESOURCE_H
 #define NET_RESOURCE_H
 
-#include "headers.h"
+#include "/home/student/Projects/JSON_CS/net_resource/headers.h"
 
 #define DEFAULT_PORT 12345
 
@@ -18,7 +18,6 @@ public:
 protected:
     int  s;
     struct sockaddr_in sock_addr;
-
     Log *pLog = new Log(LogFileName);
     time_t lt = time(NULL);
 protected:
