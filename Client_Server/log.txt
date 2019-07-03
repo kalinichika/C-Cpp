@@ -174,3 +174,143 @@ Disconnect	 | (Server) | 	Tue Jun 25 20:49:42 2019
 
 Disonnect	 | (Client) | 	Tue Jun 25 20:49:44 2019
 
+Bind		 | (Server) | 	Wed Jun 26 09:32:34 2019
+
+Listen		 | (Server) | 	Wed Jun 26 09:32:34 2019
+
+Accept		 | (Server) | 	Wed Jun 26 09:32:34 2019
+
+Connect		 | (Client) | 	Wed Jun 26 09:32:41 2019
+
+Send length	 | (Server) | 	Wed Jun 26 09:32:34 2019
+
+Receive length	 | (Client) | 	Wed Jun 26 09:32:41 2019
+
+Send message	 | (Server) | 	Wed Jun 26 09:32:34 2019
+
+Receive message	 | (Client) | 	Wed Jun 26 09:32:41 2019
+
+MESSAGE: Hello my friend!
+
+Send length	 | (Server) | 	Wed Jun 26 09:32:34 2019
+
+Send message	 | (Server) | 	Wed Jun 26 09:32:34 2019
+
+Disonnect	 | (Client) | 	Wed Jun 26 09:32:41 2019
+
+Disconnect	 | (Server) | 	Wed Jun 26 09:32:34 2019
+
+Bind		 | (Server) | 	Wed Jun 26 09:56:03 2019
+
+Listen		 | (Server) | 	Wed Jun 26 09:56:03 2019
+
+Connect		 | (Client) | 	Wed Jun 26 09:56:07 2019
+
+Accept		 | (Server) | 	Wed Jun 26 09:56:03 2019
+
+Send length	 | (Server) | 	Wed Jun 26 09:56:03 2019
+
+Receive length	 | (Client) | 	Wed Jun 26 09:56:07 2019
+
+Send message	 | (Server) | 	Wed Jun 26 09:56:03 2019
+
+Receive message	 | (Client) | 	Wed Jun 26 09:56:07 2019
+
+MESSAGE: Hello my friend!
+
+Send length	 | (Server) | 	Wed Jun 26 09:56:03 2019
+
+Disonnect	 | (Client) | 	Wed Jun 26 09:56:07 2019
+
+Send message	 | (Server) | 	Wed Jun 26 09:56:03 2019
+
+Disconnect	 | (Server) | 	Wed Jun 26 09:56:03 2019
+
+Bind		 | (Server) | 	Mon Jul  1 11:40:47 2019
+
+Listen		 | (Server) | 	Mon Jul  1 11:40:47 2019
+
+Connect		 | (Client) | 	Mon Jul  1 11:40:54 2019
+
+Disonnect	 | (Client) | 	Mon Jul  1 11:40:54 2019
+
+Accept		 | (Server) | 	Mon Jul  1 11:40:47 2019
+
+Disconnect	 | (Server) | 	Mon Jul  1 11:40:47 2019
+
+Bind		 | (Server) | 	Mon Jul  1 21:48:10 2019
+
+Listen		 | (Server) | 	Mon Jul  1 21:48:10 2019
+
+Bind		 | (Server) | 	Tue Jul  2 15:58:56 2019
+
+Listen		 | (Server) | 	Tue Jul  2 15:58:56 2019
+
+Connect		 | (Client) | 	Tue Jul  2 15:59:29 2019
+
+Accept		 | (Server) | 	Tue Jul  2 15:58:56 2019
+
+Error calling Accept	 | (Server) | 	Tue Jul  2 15:58:56 2019
+
+Bind		 | (Server) | 	Tue Jul  2 16:00:51 2019
+
+Listen		 | (Server) | 	Tue Jul  2 16:00:51 2019
+
+Accept		 | (Server) | 	Tue Jul  2 16:00:51 2019
+
+Connect		 | (Client) | 	Tue Jul  2 16:01:03 2019
+
+Error calling Accept	 | (Server) | 	Tue Jul  2 16:00:51 2019
+
+Bind		 | (Server) | 	Tue Jul  2 16:07:09 2019
+
+Listen		 | (Server) | 	Tue Jul  2 16:07:09 2019
+
+Accept		 | (Server) | 	Tue Jul  2 16:07:09 2019
+
+Connect		 | (Client) | 	Tue Jul  2 16:07:15 2019
+
+Error calling Accept	 | (Server) | 	Tue Jul  2 16:07:09 2019
+
+Error calling connect	 | (Client) | 	Tue Jul  2 16:44:24 2019
+
+Disonnect	 | (Client) | 	Tue Jul  2 16:44:24 2019
+
+Disonnect	 | (Client) | 	Tue Jul  2 16:44:24 2019
+
+Bind		 | (Server) | 	Tue Jul  2 16:44:38 2019
+
+Listen		 | (Server) | 	Tue Jul  2 16:44:38 2019
+
+Accept		 | (Server) | 	Tue Jul  2 16:44:38 2019
+
+Connect		 | (Client) | 	Tue Jul  2 16:44:43 2019
+
+Connect		 | (Client) | 	Tue Jul  2 16:44:43 2019
+
+Accept		 | (Server) | 	Tue Jul  2 16:44:38 2019
+
+Disonnect	 | (Client) | 	Tue Jul  2 16:44:43 2019
+
+Error calling Accept	 | (Server) | 	Tue Jul  2 16:44:38 2019
+
+Disonnect	 | (Client) | 	Tue Jul  2 16:44:43 2019
+
+Bind		 | (Server) | 	Tue Jul  2 16:44:54 2019
+
+Listen		 | (Server) | 	Tue Jul  2 16:44:54 2019
+
+Accept		 | (Server) | 	Tue Jul  2 16:44:54 2019
+
+Connect		 | (Client) | 	Tue Jul  2 16:44:57 2019
+
+Connect		 | (Client) | 	Tue Jul  2 16:44:57 2019
+
+Disonnect	 | (Client) | 	Tue Jul  2 16:44:57 2019
+
+Accept		 | (Server) | 	Tue Jul  2 16:44:54 2019
+
+Disonnect	 | (Client) | 	Tue Jul  2 16:44:57 2019
+
+Error calling Accept	 | (Server) | 	Tue Jul  2 16:44:54 2019
+

@@ -1,6 +1,6 @@
 #include "jsonclient.h"
 #include <vector>
-#define max_client 1000
+const unsigned int max_client = 500;
 int main()
 {
     try{
@@ -8,15 +8,14 @@ int main()
         // num - номер клиента  по умолчанию 0
         // по умолчанию port = 12345
 
-        std::vector <JSON_CS::client> Client(max_client);
+        std::vector <JSON_CS::client> Client1(max_client);
+        //std::vector <JSON_CS::client> Client2(max_client);
         for(unsigned int i = 0; i < max_client; i++)
         {
-            Client[i].Send();
-            Client[i].Recv();
+            Client1[i].Send();
+            Client1[i].Recv();
             printf ("it is Client %d\n\n", i);
-
         }
-
     }
     catch(JSON_CS::Bad_C_S_exception &error){
         std::cout<<error.what()<<std::endl;

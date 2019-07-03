@@ -5,8 +5,11 @@ CONFIG -= qt
 
 SOURCES += main.cpp \
     net_resource.cpp \
-    log.cpp
+    log.cpp \
+    create_epoll.cpp
 
 HEADERS += \
     net_resource.h \
-    log.h
+    log.h \
+    headers.h \
+    create_epoll.h

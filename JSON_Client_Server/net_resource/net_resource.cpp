@@ -24,6 +24,7 @@ int net_resource::Set_NonBlock(int sfd)
     #ifdef O_NONBLOCK
         if ( (flags = fcntl(sfd, F_GETFL, 0)) == -1 ) {
             flags = 0;
+            throw(Bad_C_S_exception("Error in SetNonBlock - fcntl - 1"));
         }
         return fcntl(sfd, F_SETFL, flags | O_NONBLOCK);
     #else
@@ -33,7 +34,7 @@ int net_resource::Set_NonBlock(int sfd)
 }
 
 // СОЗДАЕМ СОКЕТ
-int net_resource::Socket()
+int net_resource::createSocket()
 {
     s = socket(AF_INET, SOCK_STREAM, 0);
     if(s < 0)
@@ -45,18 +46,17 @@ int net_resource::Socket()
 }
 
 // ОПРЕДЕЛЯЕМ ПРОСЛУШИВАЕМЫЙ ПОРТ И АДРЕС
-void net_resource::SockAddr()
+sockaddr_in net_resource::SockAddr()
 {
-    sock_addr.sin_family = AF_INET;
-    sock_addr.sin_port = htons(12345);
-    sock_addr.sin_addr.s_addr = htonl(INADDR_ANY);
+    sockaddr_in sa;
+    sa.sin_family = AF_INET;
+    sa.sin_port = htons(DEFAULT_PORT);
+    sa.sin_addr.s_addr = htonl(INADDR_ANY);
+    return sa;
 }
 
-void net_resource::Close()
+void net_resource::Close(int fd)
 {
-    close(s);
+    //shutdown(fd, SHUT_RDWR);
+    close(fd);
 }
-
-Bad_C_S_exception::Bad_C_S_exception(const std::string e) : error(e){}
-
-Bad_C_S_exception::Bad_C_S_exception(Bad_C_S_exception&& other) : error(other.what()){}

@@ -6,7 +6,8 @@ int main()
     {
         // СОЗДАНИЕ СЕРВЕРА С ПАРАМЕТРОМ (port)
         // по умолчанию port = 12345
-        JSON_CS::server Server(12345);
+
+        JSON_CS::server Server;
         //Server.Rec();
 
     }

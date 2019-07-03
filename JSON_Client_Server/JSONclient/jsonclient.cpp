@@ -3,12 +3,6 @@ using namespace JSON_CS;
 
 client::client() noexcept(false)
 {
-    // СОЗДАНИЕ СОКЕТА
-    Socket();
-
-    // СОЕДИНЕНИЕ ПО ОПРЕДЕЛЕННОМУ ПОРТУ С ХОСТОМ
-    SockAddr();
-
     // должно отработать до accepta в сервере
     Connect();
 }
@@ -17,7 +11,7 @@ client::~client() noexcept
 {
     //РАЗРЫВ СОЕДИНЕНИЯ И ЗАКРЫТИЕ СОКЕТА
     //pLog->Write("Disonnect\t |(Client %d)| \t%s", num, ctime(&lt));
-    Close();
+    Close(s);
 }
 
 void client::Connect() const
@@ -32,7 +26,7 @@ void client::Connect() const
 
 void client::Send() const noexcept
 {
-    char Buffer[] = "Hello SERVER!";
+    std::string  Buffer(ctime(&lt));
     send(s, &Buffer[0], sizeof(Buffer), 0);
     //pLog->Write("Send message\t |(Client %d)| \t%s", num, ctime(&lt));
     //printf("Send message\t |(Client %d)| \t%s", num, ctime(&lt));
@@ -48,7 +42,7 @@ void client::Recv() const noexcept
         pLog->Write("Error Recv\t |(Client %d)| \t%s", num, ctime(&lt));
     }
     else {
-        //printf("Recv : \"%s\" |(Client %d)| \t%s", Buffer, num, ctime(&lt));
+        printf("Recv : %s", Buffer);
         //pLog->Write("Recv : \"%s\" |(Client %d)| \t%s", Buffer, num, ctime(&lt));
     }
 }

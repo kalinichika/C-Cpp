@@ -2,32 +2,32 @@
 #define JSONSERVER_H
 
 #include "/home/student/Projects/JSON_CS/net_resource/net_resource.h"
-#include "/home/student/Projects/JSON_CS/net_resource/log.h"
+#include "/home/student/Projects/JSON_CS/net_resource/create_epoll.h"
+
+#define MAX_EVENTS 10000
 
 namespace JSON_CS
 {
 
-    class server : public net_resource
-    {
-    public:
-        server(unsigned int port = 12345) noexcept(false);
-        ~server() noexcept;
-    private:
-        void Bind() const;
-        void Listen() const;
-        void f_EPOLL();
-        void Accept();
+class server : public net_resource
+{
+public:
+    server() noexcept(false);
+    ~server() noexcept;
 
-        int new_s;
+private:
+    void SConnect();
+    void Bind() const;
+    void Listen() const;
+    void f_EPOLL();
 
-        Log *pLog = new Log(LogFileName);
-        time_t lt = time(NULL);
+    int new_s;
 
-        server(const server &other) = delete;
-        server(server &&other) = delete;
-        server operator = (const server &other) = delete;
-        server operator = (server &&other) = delete;
-    };
+    server(const server &other) = delete;
+    server(server &&other) = delete;
+    server operator = (const server &other) = delete;
+    server operator = (server &&other) = delete;
+};
 
 }
 
