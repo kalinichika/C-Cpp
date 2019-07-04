@@ -12,7 +12,6 @@ class server : public net_resource
 public:
     server() noexcept(false);
     ~server() noexcept;
-
 private:
     void SConnect();
     void Bind() const;

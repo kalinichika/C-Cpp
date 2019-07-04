@@ -30,8 +30,13 @@ void server::SConnect()
 
 void server::Bind() const
 {
+    //чтобы избежать проблем с "Address already in use"
+    int opt = 1;
+    if (setsockopt (s, SOL_SOCKET, SO_REUSEADDR, &opt, sizeof (opt)) == -1) perror("setsockopt");
+
     if( bind(s, (struct sockaddr *)&sock_addr, sizeof(sock_addr)) < 0 )
     {
+        //perror("");
         pLog->Write("Error calling bind\t | (Server) | \t%s",ctime(&lt));
         throw(Bad_C_S_exception("Error calling bind"));
     }

@@ -11,11 +11,14 @@ class client : public net_resource
 public:
     client () noexcept(false);
     ~client() noexcept;
-    void Send() const noexcept;
-    void Recv() const noexcept;
+    void Set(std::string, int);
+    void Get(std::string);
+private:
+    cJSON* obj = cJSON_CreateObject();
 private:
     void Connect() const;
-
+    void Send() const noexcept;
+    void Recv() const noexcept;
     client(const client &other) = delete;
     client(client &other) = delete;
     client operator = (const client &other) = delete;

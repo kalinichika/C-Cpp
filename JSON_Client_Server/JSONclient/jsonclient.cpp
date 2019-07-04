@@ -12,6 +12,7 @@ client::~client() noexcept
     //РАЗРЫВ СОЕДИНЕНИЯ И ЗАКРЫТИЕ СОКЕТА
     pLog->Write("Disonnect\t | (Client) | \t%s",ctime(&lt));
     Close(s);
+    cJSON_Delete(obj);
 }
 
 void client::Connect() const
@@ -24,27 +25,58 @@ void client::Connect() const
     pLog->Write("Connect\t\t | (Client) | \t%s",ctime(&lt));
 }
 
+void client::Set(std::string sequence, int value)
+{
+    cJSON_AddStringToObject(obj, "action", "set");
+    cJSON_AddStringToObject(obj, "sequence", sequence.c_str());
+    cJSON_AddNumberToObject(obj, "value", value);
+
+    Send();
+    Recv();
+}
+
+void client::Get(std::string sequence)
+{
+    cJSON_AddStringToObject(obj, "action", "get");
+    cJSON_AddStringToObject(obj,  "sequence", sequence.c_str());
+
+    Send();
+    Recv();
+}
+
 void client::Send() const noexcept
 {
-    std::string  Buffer(ctime(&lt));
-    send(s, &Buffer[0], sizeof(Buffer), 0);
-    //pLog->Write("Send message\t | (Client) | \t%s", ctime(&lt));
-    //printf("Send message\t | (Client) | \t%s", ctime(&lt));
+    std::string str = cJSON_Print(obj);
+    int SendResult = send(s, str.c_str(), str.size(), 0);
+
+    if ( SendResult <= 0 )
+    {
+        pLog->Write("Error Send\t | (Client) | \t%s", ctime(&lt));
+        throw(Bad_C_S_exception("Error Send"));
+    }
+    else
+    {
+        printf("\nQuery for Server :\n%s\n", str.c_str());
+        pLog->Write("\nQuery for Server :\n%s\n", str.c_str());
+    }
 }
 
 void client::Recv() const noexcept
 {
-    char Buffer[1024];
-    memset(Buffer, 0, 1024);
-    int RecvResult = recv(s, Buffer, 1024, 0);
+    char Buffer[1000];
+    memset(Buffer, 0, 1000);
+    int RecvResult = recv(s, Buffer, 1000, 0);
     if ( RecvResult < 0 )
     {
         pLog->Write("Error Recv\t | (Client) | \t%s", ctime(&lt));
+        throw(Bad_C_S_exception("Error Recv"));
     }
     else {
-        //printf("Recv : %s", Buffer);
-        //pLog->Write("Recv : \"%s\" | (Client) | \t%s", Buffer, ctime(&lt));
+        //char* answ = cJSON_Print(cJSON_Parse(Buffer));
+        printf("Client %s:\n%s\n",cJSON_GetObjectItem(obj, "action")->valuestring, Buffer);
+        pLog->Write("Client %s: \n%s\n",cJSON_GetObjectItem(obj, "action")->valuestring, Buffer);
     }
 }
+
 
 
