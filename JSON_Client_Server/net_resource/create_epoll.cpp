@@ -112,7 +112,7 @@ void create_epoll::Work(int i)
     else if( RecvResult >0 )
     {
         //printf("Recv : \"%s\" | ( from Client %d) | \t%s", Buffer, count_client++, ctime(&lt));
-        pLog->Write("Recv : \"%s\" | ( from Client %d) | \t%s", Buffer, count_client++, ctime(&lt));
+        //pLog->Write("Recv : \"%s\" | ( from Client %d) | \t%s", Buffer, count_client++, ctime(&lt));
 
         send(Events[i].data.fd, Buffer, RecvResult, 0);
     }

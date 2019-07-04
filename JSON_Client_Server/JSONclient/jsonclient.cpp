@@ -10,7 +10,7 @@ client::client() noexcept(false)
 client::~client() noexcept
 {
     //РАЗРЫВ СОЕДИНЕНИЯ И ЗАКРЫТИЕ СОКЕТА
-    //pLog->Write("Disonnect\t | (Client) | \t%s",ctime(&lt));
+    pLog->Write("Disonnect\t | (Client) | \t%s",ctime(&lt));
     Close(s);
 }
 
@@ -21,7 +21,7 @@ void client::Connect() const
         pLog->Write("Error calling connect\t | (Client) | \t%s",ctime(&lt));
         throw(Bad_C_S_exception("Error calling connect"));
     }
-    //pLog->Write("Connect\t\t | (Client) | \t%s",ctime(&lt));
+    pLog->Write("Connect\t\t | (Client) | \t%s",ctime(&lt));
 }
 
 void client::Send() const noexcept
@@ -42,7 +42,7 @@ void client::Recv() const noexcept
         pLog->Write("Error Recv\t | (Client) | \t%s", ctime(&lt));
     }
     else {
-        printf("Recv : %s", Buffer);
+        //printf("Recv : %s", Buffer);
         //pLog->Write("Recv : \"%s\" | (Client) | \t%s", Buffer, ctime(&lt));
     }
 }
