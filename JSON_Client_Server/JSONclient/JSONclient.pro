@@ -7,7 +7,6 @@ SOURCES += main.cpp \
     ../net_resource/log.cpp \
     ../net_resource/net_resource.cpp \
     jsonclient.cpp \
-    ../net_resource/bad_c_s_exception.cpp \
     ../net_resource/cJSON.c
 
 HEADERS += \
@@ -15,4 +14,5 @@ HEADERS += \
     ../net_resource/net_resource.h \
     jsonclient.h \
     ../net_resource/bad_c_s_exception.h \
-    ../net_resource/cJSON.h
+    ../net_resource/cJSON.h \
+    ../net_resource/headers.h

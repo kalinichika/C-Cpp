@@ -8,7 +8,6 @@ SOURCES += main.cpp \
     ../net_resource/log.cpp \
     jsonserver.cpp \
     ../net_resource/create_epoll.cpp \
-    ../net_resource/bad_c_s_exception.cpp \
     ../net_resource/cJSON.c
 
 HEADERS += \

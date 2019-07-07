@@ -9,16 +9,15 @@ namespace JSON_CS
 class client : public net_resource
 {
 public:
-    client () noexcept(false);
+    client (int port = DEFAULT_PORT) noexcept(false);
     ~client() noexcept;
-    void Set(std::string, int);
-    void Get(std::string);
+    void Connect() const noexcept(false);
+    void Disconnect() noexcept;
+    void Set(std::string, int) const noexcept(false);
+    void Get(std::string) const noexcept(false);
 private:
-    cJSON* obj = cJSON_CreateObject();
-private:
-    void Connect() const;
-    void Send() const noexcept;
-    void Recv() const noexcept;
+    void Send(std::string) const noexcept(false);
+    void Recv(cJSON*) const noexcept(false);
     client(const client &other) = delete;
     client(client &other) = delete;
     client operator = (const client &other) = delete;

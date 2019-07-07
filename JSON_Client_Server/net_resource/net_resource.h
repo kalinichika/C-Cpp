@@ -21,12 +21,11 @@ protected:
     Log *pLog = new Log(LogFileName);
     time_t lt = time(NULL);
 protected:
-    net_resource() : s(createSocket()), sock_addr(SockAddr()){}
+    net_resource(const unsigned int port) : s(createSocket()), sock_addr(SockAddr(port)){}
     virtual ~net_resource() = default;
 
     int createSocket() noexcept(false);
-    sockaddr_in SockAddr();
-    void Close(int);
+    sockaddr_in SockAddr(const unsigned int port);
     int Set_NonBlock(int);
 };
 

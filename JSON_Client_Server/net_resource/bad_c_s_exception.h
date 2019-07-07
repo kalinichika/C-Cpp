@@ -9,8 +9,8 @@ namespace JSON_CS
 class Bad_C_S_exception : public std::exception {
     const std::string error;
 public:
-    Bad_C_S_exception(const std::string);
-    Bad_C_S_exception(Bad_C_S_exception&& other);
+    Bad_C_S_exception(const std::string e) : error(e){}
+    Bad_C_S_exception(Bad_C_S_exception&& other) : error(other.what()){}
     inline const std::string what(){ return error; }
 };
 
