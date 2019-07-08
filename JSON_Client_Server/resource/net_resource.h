@@ -1,7 +1,7 @@
 #ifndef NET_RESOURCE_H
 #define NET_RESOURCE_H
 
-#include "/home/student/Projects/JSON_CS/net_resource/headers.h"
+#include "headers.h"
 
 #define DEFAULT_PORT 12345
 
@@ -22,7 +22,7 @@ protected:
     time_t lt = time(NULL);
 protected:
     net_resource(const unsigned int port) : s(createSocket()), sock_addr(SockAddr(port)){}
-    virtual ~net_resource() = default;
+    ~net_resource() { delete pLog; }
 
     int createSocket() noexcept(false);
     sockaddr_in SockAddr(const unsigned int port);
@@ -33,4 +33,3 @@ protected:
 }
 
 #endif // NET_RESOURCE_H
-

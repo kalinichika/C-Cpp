@@ -1,9 +1,9 @@
 #ifndef JSONSERVER_H
 #define JSONSERVER_H
 
-#include "/home/student/Projects/JSON_CS/net_resource/net_resource.h"
-#include "/home/student/Projects/JSON_CS/net_resource/create_epoll.h"
-
+#include "/home/student/Projects/JSON_CS/resource/net_resource.h"
+#include "/home/student/Projects/JSON_CS/resource/counters_manager.h"
+#define PRINT_LOG
 namespace JSON_CS
 {
 
@@ -16,10 +16,7 @@ public:
 private:
     void Bind() const;
     void Listen() const;
-    void f_EPOLL(const int time_for_wait);
-    void Answer(int i);
-    void Recv(int i);
-    void Send(int i);
+    void communication(const int time_for_wait);
 
     server(const server &other) = delete;
     server(server &&other) = delete;

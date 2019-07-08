@@ -1,7 +1,7 @@
 #ifndef JSONCLIENT_H
 #define JSONCLIENT_H
 
-#include "/home/student/Projects/JSON_CS/net_resource/net_resource.h"
+#include "/home/student/Projects/JSON_CS/resource/net_resource.h"
 
 namespace JSON_CS
 {

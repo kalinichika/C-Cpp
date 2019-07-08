@@ -1,4 +1,5 @@
 #include "net_resource.h"
+
 using namespace JSON_CS;
 
 // СОЗДАЕМ СОКЕТ

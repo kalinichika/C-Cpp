@@ -4,17 +4,21 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    ../net_resource/net_resource.cpp \
-    ../net_resource/log.cpp \
     jsonserver.cpp \
-    ../net_resource/create_epoll.cpp \
-    ../net_resource/cJSON.c
+    ../resource/log.cpp \
+    ../resource/cJSON.c \
+    ../resource/counters_view_json.cpp \
+    ../resource/net_resource.cpp \
+    ../resource/counters.cpp \
+    ../resource/counters_manager.cpp
 
 HEADERS += \
-    ../net_resource/net_resource.h \
-    ../net_resource/log.h \
     jsonserver.h \
-    ../net_resource/create_epoll.h \
-    ../net_resource/headers.h \
-    ../net_resource/bad_c_s_exception.h \
-    ../net_resource/cJSON.h
+    ../resource/bad_c_s_exception.h \
+    ../resource/cJSON.h \
+    ../resource/headers.h \
+    ../resource/log.h \
+    ../resource/counters.h \
+    ../resource/counters_manager.h \
+    ../resource/counters_view_json.h \
+    ../resource/net_resource.h

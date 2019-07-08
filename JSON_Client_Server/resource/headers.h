@@ -18,8 +18,9 @@
 
 #include <stdarg.h>
 
-#include "/home/student/Projects/JSON_CS/net_resource/bad_c_s_exception.h"
-#include "/home/student/Projects/JSON_CS/net_resource/log.h"
-#include "/home/student/Projects/JSON_CS/net_resource/cJSON.h"
+#include "/home/student/Projects/JSON_CS/resource/bad_c_s_exception.h"
+#include "/home/student/Projects/JSON_CS/resource/log.h"
+#include "/home/student/Projects/JSON_CS/resource/cJSON.h"
 
 #endif // HEADERS_H
+

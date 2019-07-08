@@ -4,15 +4,15 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cpp \
-    ../net_resource/log.cpp \
-    ../net_resource/net_resource.cpp \
     jsonclient.cpp \
-    ../net_resource/cJSON.c
+    ../resource/log.cpp \
+    ../resource/net_resource.cpp \
+    ../resource/cJSON.c
 
 HEADERS += \
-    ../net_resource/log.h \
-    ../net_resource/net_resource.h \
     jsonclient.h \
-    ../net_resource/bad_c_s_exception.h \
-    ../net_resource/cJSON.h \
-    ../net_resource/headers.h
+    ../resource/bad_c_s_exception.h \
+    ../resource/headers.h \
+    ../resource/log.h \
+    ../resource/net_resource.h \
+    ../resource/cJSON.h

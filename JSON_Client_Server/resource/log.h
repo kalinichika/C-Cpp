@@ -6,7 +6,7 @@
 #include <string>
 #include <time.h>
 
-#include "/home/student/Projects/JSON_CS/net_resource/bad_c_s_exception.h"
+#include "/home/student/Projects/JSON_CS/resource/bad_c_s_exception.h"
 #define LogFileName "/home/student/Projects/JSON_CS/log.txt"
 
 

@@ -1,4 +1,5 @@
-#include "/home/student/Projects/JSON_CS/JSONclient/jsonclient.h"
+#include "jsonclient.h"
+//#undef PRINT_LOG
 using namespace JSON_CS;
 
 client::client(const int port) noexcept(false)
@@ -9,7 +10,9 @@ client::client(const int port) noexcept(false)
 
 client::~client() noexcept
 {
+#ifdef PRINT_LOG
     pLog->Write("Disonnect\t | (Client) | \t%s",ctime(&lt));
+#endif
     close(s);
 }
 
@@ -17,10 +20,14 @@ void client::Connect() const noexcept(false)
 {
     if( connect( s, ( struct sockaddr * )&sock_addr, sizeof(sock_addr) ) < 0 )
     {
+#ifdef PRINT_LOG
         pLog->Write("Error calling connect\t | (Client) | \t%s",ctime(&lt));
+#endif
         throw(Bad_C_S_exception("Error calling connect"));
     }
+#ifdef PRINT_LOG
     pLog->Write("Connect\t\t | (Client) | \t%s",ctime(&lt));
+#endif
 }
 
 void client::Set(std::string sequence, int value) const noexcept(false)
@@ -51,36 +58,45 @@ void client::Send( std::string str) const noexcept(false)
     int res = send( s, str.c_str(), str.size(), 0 );
     if ( res <= 0 )
     {
+#ifdef PRINT_LOG
         pLog->Write("Error Send query\t | (Client) | \t%s", ctime(&lt));
+#endif
         throw(Bad_C_S_exception("Error Send query"));
     }
     else
     {
         //printf("\nQuery for Server :\n%s\n", str.c_str());
+#ifdef PRINT_LOG
         //pLog->Write("\nQuery for Server :\n%s\n", str.c_str());
+#endif
     }
 /*
     const int l = str.size();
     char length[5];
     sprintf(length,"%d",l);
-    //std::cout<<l<<" "<<length;
     int res = send( s, length, 4, 0 );
     if ( res <= 0 )
     {
+#ifdef PRINT_LOG
         pLog->Write("Error Send length\t | (Client) | \t%s", ctime(&lt));
+#endif
         throw(Bad_C_S_exception("Error Send length"));
     }
-
+    //sleep(10);
     res = send( s, str.c_str(), l, 0 );
     if ( res <= 0 )
     {
+#ifdef PRINT_LOG
         pLog->Write("Error Send query\t | (Client) | \t%s", ctime(&lt));
+#endif
         throw(Bad_C_S_exception("Error Send query"));
     }
     else
     {
         printf("\nQuery for Server :\n%s\n", str.c_str());
+#ifdef PRINT_LOG
         pLog->Write("\nQuery for Server :\n%s\n", str.c_str());
+#endif
     }
 */
 }
@@ -95,23 +111,27 @@ void client::Recv(cJSON* obj) const noexcept(false)
 
     if ( res < 0 )
     {
+#ifdef PRINT_LOG
         pLog->Write("Error Recv\t | (Client) | ", stime(&lt));
+#endif
         throw(Bad_C_S_exception("Error Recv"));
     }
     else
     {
         printf("Client %s:\n%s\n", cJSON_GetObjectItem(obj, "action")->valuestring, Buffer);
+#ifdef PRINT_LOG
         pLog->Write("Client %s:\n%s\n", cJSON_GetObjectItem(obj, "action")->valuestring, Buffer);
+#endif
     }
 /*
-
     char length[5] = {0};
     int res =  recv(s, length, 4, 0);
     const int l = atoi(length);
-    std::cout<<l<<" "<<length;
     if (res<0)
     {
+#ifdef PRINT_LOG
         pLog->Write("Error Recv\t | (Client) | ", stime(&lt));
+#endif
         throw(Bad_C_S_exception("Error Recv length"));
     }
 
@@ -121,13 +141,16 @@ void client::Recv(cJSON* obj) const noexcept(false)
     res =  recv(s, Buffer, l, 0);
     if (res<0)
     {
+#ifdef PRINT_LOG
         pLog->Write("Error Recv\t | (Client) | ", stime(&lt));
+#endif
         throw(Bad_C_S_exception("Error Recv length"));
     }
     else
     {
-        printf("Client %s:\n%s\n", cJSON_GetObjectItem(obj, "action")->valuestring, Buffer);
+#ifdef PRINT_LOG
         pLog->Write("Client %s:\n%s\n", cJSON_GetObjectItem(obj, "action")->valuestring, Buffer);
+#endif
     }
 */
 }

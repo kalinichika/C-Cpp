@@ -1,57 +1,5175 @@
-Bind		 | (Server) | 	Sun Jul  7 22:30:50 2019
+Bind		 | (Server) | 	Tue Jul  9 00:33:18 2019
 
-Listen		 | (Server) | 	Sun Jul  7 22:30:50 2019
+Listen		 | (Server) | 	Tue Jul  9 00:33:18 2019
 
-Connect		 | (Client) | 	Sun Jul  7 22:30:56 2019
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34098)
 
-CHANGE SEQUENCE : {
-	"maestro":	57,
-	"mastercard":	184,
-	"mir":	123,
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	1
+}
+COUNTERS:{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	1
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=34100)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
 	"visa":	2
 }
-
-Client get:
-{
-	"mir":	123
+COUNTERS:{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	2
 }
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"maestro":	0,
+	"mir":	1,
+	"mastercard":	0,
+	"visa":	2
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=34102)
 
-CHANGE SEQUENCE : {
-	"maestro":	57,
-	"mastercard":	184,
-	"mir":	123,
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"maestro":	0,
+	"mir":	1,
+	"mastercard":	0,
+	"visa":	2
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
 	"visa":	3
 }
-
-Client get:
-{
+COUNTERS:{
+	"maestro":	0,
+	"mir":	1,
+	"mastercard":	0,
 	"visa":	3
 }
-
-Connect		 | (Client) | 	Sun Jul  7 22:30:56 2019
-
-CHANGE SEQUENCE : {
-	"maestro":	57,
-	"mastercard":	184,
-	"mir":	123,
-	"other":	0,
-	"visa":	3
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
 }
-
-CHANGE SEQUENCE : {
-	"maestro":	57,
-	"mastercard":	184,
-	"mir":	123,
-	"other":	100,
-	"visa":	3
+Server Send:{
+	"lol":	7
 }
-
-Client set:
-{
-	"other":	100
+COUNTERS:{
+	"visa":	3,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
 }
+Accepted connection on descriptor 10 (host=127.0.0.1, port=34104)
 
-Disonnect	 | (Client) | 	Sun Jul  7 22:30:56 2019
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"visa":	3,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	4
+}
+COUNTERS:{
+	"visa":	4,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	1
+}
+COUNTERS:{
+	"other":	1,
+	"visa":	4,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34106)
 
-Disonnect	 | (Client) | 	Sun Jul  7 22:30:56 2019
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	5
+}
+COUNTERS:{
+	"other":	1,
+	"visa":	5,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 11 (host=127.0.0.1, port=34108)
 
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	6
+}
+COUNTERS:{
+	"other":	1,
+	"visa":	6,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 12 (host=127.0.0.1, port=34110)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	7
+}
+COUNTERS:{
+	"other":	1,
+	"visa":	7,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 13 (host=127.0.0.1, port=34112)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	8
+}
+COUNTERS:{
+	"other":	1,
+	"visa":	8,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 14 (host=127.0.0.1, port=34114)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	9
+}
+COUNTERS:{
+	"other":	1,
+	"visa":	9,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 15 (host=127.0.0.1, port=34116)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	10
+}
+COUNTERS:{
+	"other":	1,
+	"visa":	10,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 16 (host=127.0.0.1, port=34118)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	11
+}
+COUNTERS:{
+	"other":	1,
+	"visa":	11,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	1,
+	"visa":	11,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 17 (host=127.0.0.1, port=34120)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	12
+}
+COUNTERS:{
+	"other":	1,
+	"visa":	12,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 18 (host=127.0.0.1, port=34122)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	13
+}
+COUNTERS:{
+	"other":	1,
+	"visa":	13,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 19 (host=127.0.0.1, port=34124)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	14
+}
+COUNTERS:{
+	"other":	1,
+	"visa":	14,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 20 (host=127.0.0.1, port=34126)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	15
+}
+COUNTERS:{
+	"other":	1,
+	"visa":	15,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 21 (host=127.0.0.1, port=34128)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	16
+}
+COUNTERS:{
+	"other":	1,
+	"visa":	16,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 22 (host=127.0.0.1, port=34130)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	2
+}
+COUNTERS:{
+	"other":	2,
+	"visa":	16,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	17
+}
+COUNTERS:{
+	"other":	2,
+	"visa":	17,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	2,
+	"visa":	17,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=34132)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	18
+}
+COUNTERS:{
+	"other":	2,
+	"visa":	18,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	2,
+	"visa":	18,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	3
+}
+COUNTERS:{
+	"other":	3,
+	"visa":	18,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 23 (host=127.0.0.1, port=34134)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	19
+}
+COUNTERS:{
+	"other":	3,
+	"visa":	19,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	3,
+	"visa":	19,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	3,
+	"visa":	19,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 24 (host=127.0.0.1, port=34136)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	20
+}
+COUNTERS:{
+	"other":	3,
+	"visa":	20,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	3,
+	"visa":	20,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 25 (host=127.0.0.1, port=34138)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	21
+}
+COUNTERS:{
+	"other":	3,
+	"visa":	21,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 26 (host=127.0.0.1, port=34140)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	22
+}
+COUNTERS:{
+	"other":	3,
+	"visa":	22,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	3,
+	"visa":	22,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	4
+}
+COUNTERS:{
+	"other":	4,
+	"visa":	22,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	4,
+	"visa":	22,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	4,
+	"visa":	22,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	5
+}
+COUNTERS:{
+	"other":	5,
+	"visa":	22,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 15 (host=127.0.0.1, port=34142)
+
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	5,
+	"visa":	22,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	5,
+	"visa":	22,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	23
+}
+COUNTERS:{
+	"other":	5,
+	"visa":	23,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 16 (host=127.0.0.1, port=34144)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	24
+}
+COUNTERS:{
+	"other":	5,
+	"visa":	24,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 27 (host=127.0.0.1, port=34146)
+
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	5,
+	"visa":	24,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	5,
+	"visa":	24,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	25
+}
+COUNTERS:{
+	"other":	5,
+	"visa":	25,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	5,
+	"visa":	25,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	5,
+	"visa":	25,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	5,
+	"visa":	25,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	5,
+	"visa":	25,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	5,
+	"visa":	25,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	5,
+	"visa":	25,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	6
+}
+COUNTERS:{
+	"other":	6,
+	"visa":	25,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	7
+}
+COUNTERS:{
+	"other":	7,
+	"visa":	25,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	7,
+	"visa":	25,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	8
+}
+COUNTERS:{
+	"other":	8,
+	"visa":	25,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	9
+}
+COUNTERS:{
+	"other":	9,
+	"visa":	25,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	9,
+	"visa":	25,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34148)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	26
+}
+COUNTERS:{
+	"other":	9,
+	"visa":	26,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=34150)
+
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	9,
+	"visa":	26,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	27
+}
+COUNTERS:{
+	"other":	9,
+	"visa":	27,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	9,
+	"visa":	27,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	10
+}
+COUNTERS:{
+	"other":	10,
+	"visa":	27,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	10,
+	"visa":	27,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	10,
+	"visa":	27,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	10,
+	"visa":	27,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	10,
+	"visa":	27,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	10,
+	"visa":	27,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	11
+}
+COUNTERS:{
+	"other":	11,
+	"visa":	27,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	11,
+	"visa":	27,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	11,
+	"visa":	27,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 12 (host=127.0.0.1, port=34152)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	28
+}
+COUNTERS:{
+	"other":	11,
+	"visa":	28,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 13 (host=127.0.0.1, port=34154)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	29
+}
+COUNTERS:{
+	"other":	11,
+	"visa":	29,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	12
+}
+COUNTERS:{
+	"other":	12,
+	"visa":	29,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	13
+}
+COUNTERS:{
+	"other":	13,
+	"visa":	29,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	13,
+	"visa":	29,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 14 (host=127.0.0.1, port=34156)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	14
+}
+COUNTERS:{
+	"other":	14,
+	"visa":	29,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	15
+}
+COUNTERS:{
+	"other":	15,
+	"visa":	29,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	15,
+	"visa":	29,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	15,
+	"visa":	29,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	15,
+	"visa":	29,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	15,
+	"visa":	29,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 20 (host=127.0.0.1, port=34158)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	30
+}
+COUNTERS:{
+	"other":	15,
+	"visa":	30,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	31
+}
+COUNTERS:{
+	"other":	15,
+	"visa":	31,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 25 (host=127.0.0.1, port=34160)
+
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	15,
+	"visa":	31,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	15,
+	"visa":	31,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	15,
+	"visa":	31,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	15,
+	"visa":	31,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	15,
+	"visa":	31,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	15,
+	"visa":	31,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	15,
+	"visa":	31,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	15,
+	"visa":	31,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	15,
+	"visa":	31,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	16
+}
+COUNTERS:{
+	"other":	16,
+	"visa":	31,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	16,
+	"visa":	31,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	16,
+	"visa":	31,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	16,
+	"visa":	31,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	16,
+	"visa":	31,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	16,
+	"visa":	31,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	16,
+	"visa":	31,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	32
+}
+COUNTERS:{
+	"other":	16,
+	"visa":	32,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 16 (host=127.0.0.1, port=34162)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	17
+}
+COUNTERS:{
+	"other":	17,
+	"visa":	32,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	18
+}
+COUNTERS:{
+	"other":	18,
+	"visa":	32,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	18,
+	"visa":	32,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	19
+}
+COUNTERS:{
+	"other":	19,
+	"visa":	32,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	19,
+	"visa":	32,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	19,
+	"visa":	32,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	19,
+	"visa":	32,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	19,
+	"visa":	32,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	19,
+	"visa":	32,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	19,
+	"visa":	32,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	20
+}
+COUNTERS:{
+	"other":	20,
+	"visa":	32,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	21
+}
+COUNTERS:{
+	"other":	21,
+	"visa":	32,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	21,
+	"visa":	32,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	22
+}
+COUNTERS:{
+	"other":	22,
+	"visa":	32,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	23
+}
+COUNTERS:{
+	"other":	23,
+	"visa":	32,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 17 (host=127.0.0.1, port=34164)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	33
+}
+COUNTERS:{
+	"other":	23,
+	"visa":	33,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	23,
+	"visa":	33,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	24
+}
+COUNTERS:{
+	"other":	24,
+	"visa":	33,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	25
+}
+COUNTERS:{
+	"other":	25,
+	"visa":	33,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	26
+}
+COUNTERS:{
+	"other":	26,
+	"visa":	33,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	27
+}
+COUNTERS:{
+	"other":	27,
+	"visa":	33,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	28
+}
+COUNTERS:{
+	"other":	28,
+	"visa":	33,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	29
+}
+COUNTERS:{
+	"other":	29,
+	"visa":	33,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	30
+}
+COUNTERS:{
+	"other":	30,
+	"visa":	33,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	31
+}
+COUNTERS:{
+	"other":	31,
+	"visa":	33,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	34
+}
+COUNTERS:{
+	"other":	31,
+	"visa":	34,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	31,
+	"visa":	34,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34166)
+
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	31,
+	"visa":	34,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	31,
+	"visa":	34,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	31,
+	"visa":	34,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	35
+}
+COUNTERS:{
+	"other":	31,
+	"visa":	35,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=34168)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	32
+}
+COUNTERS:{
+	"other":	32,
+	"visa":	35,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=34170)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	33
+}
+COUNTERS:{
+	"other":	33,
+	"visa":	35,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	33,
+	"visa":	35,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	33,
+	"visa":	35,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	36
+}
+COUNTERS:{
+	"other":	33,
+	"visa":	36,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	37
+}
+COUNTERS:{
+	"other":	33,
+	"visa":	37,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 10 (host=127.0.0.1, port=34172)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	34
+}
+COUNTERS:{
+	"other":	34,
+	"visa":	37,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	34,
+	"visa":	37,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	34,
+	"visa":	37,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	38
+}
+COUNTERS:{
+	"other":	34,
+	"visa":	38,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	34,
+	"visa":	38,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 11 (host=127.0.0.1, port=34174)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	35
+}
+COUNTERS:{
+	"other":	35,
+	"visa":	38,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	35,
+	"visa":	38,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	39
+}
+COUNTERS:{
+	"other":	35,
+	"visa":	39,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	35,
+	"visa":	39,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	35,
+	"visa":	39,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34176)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	36
+}
+COUNTERS:{
+	"other":	36,
+	"visa":	39,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 12 (host=127.0.0.1, port=34178)
+
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	36,
+	"visa":	39,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	37
+}
+COUNTERS:{
+	"other":	37,
+	"visa":	39,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	37,
+	"visa":	39,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	40
+}
+COUNTERS:{
+	"other":	37,
+	"visa":	40,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	41
+}
+COUNTERS:{
+	"other":	37,
+	"visa":	41,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=34180)
+
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	37,
+	"visa":	41,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	38
+}
+COUNTERS:{
+	"other":	38,
+	"visa":	41,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	38,
+	"visa":	41,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	42
+}
+COUNTERS:{
+	"other":	38,
+	"visa":	42,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	39
+}
+COUNTERS:{
+	"other":	39,
+	"visa":	42,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	39,
+	"visa":	42,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=34182)
+
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	39,
+	"visa":	42,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	39,
+	"visa":	42,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	39,
+	"visa":	42,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	43
+}
+COUNTERS:{
+	"other":	39,
+	"visa":	43,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	39,
+	"visa":	43,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 10 (host=127.0.0.1, port=34184)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	40
+}
+COUNTERS:{
+	"other":	40,
+	"visa":	43,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	40,
+	"visa":	43,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	41
+}
+COUNTERS:{
+	"other":	41,
+	"visa":	43,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	44
+}
+COUNTERS:{
+	"other":	41,
+	"visa":	44,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	41,
+	"visa":	44,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=34186)
+
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	41,
+	"visa":	44,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	42
+}
+COUNTERS:{
+	"other":	42,
+	"visa":	44,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	45
+}
+COUNTERS:{
+	"other":	42,
+	"visa":	45,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 11 (host=127.0.0.1, port=34188)
+
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	42,
+	"visa":	45,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	42,
+	"visa":	45,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	46
+}
+COUNTERS:{
+	"other":	42,
+	"visa":	46,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	43
+}
+COUNTERS:{
+	"other":	43,
+	"visa":	46,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=34190)
+
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	43,
+	"visa":	46,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	43,
+	"visa":	46,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	47
+}
+COUNTERS:{
+	"other":	43,
+	"visa":	47,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	44
+}
+COUNTERS:{
+	"other":	44,
+	"visa":	47,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	44,
+	"visa":	47,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	44,
+	"visa":	47,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	45
+}
+COUNTERS:{
+	"other":	45,
+	"visa":	47,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	45,
+	"visa":	47,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=34192)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	46
+}
+COUNTERS:{
+	"other":	46,
+	"visa":	47,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	48
+}
+COUNTERS:{
+	"other":	46,
+	"visa":	48,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	46,
+	"visa":	48,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=34194)
+
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	46,
+	"visa":	48,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	47
+}
+COUNTERS:{
+	"other":	47,
+	"visa":	48,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	49
+}
+COUNTERS:{
+	"other":	47,
+	"visa":	49,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 10 (host=127.0.0.1, port=34196)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	48
+}
+COUNTERS:{
+	"other":	48,
+	"visa":	49,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	50
+}
+COUNTERS:{
+	"other":	48,
+	"visa":	50,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	48,
+	"visa":	50,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34198)
+
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	48,
+	"visa":	50,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	48,
+	"visa":	50,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	51
+}
+COUNTERS:{
+	"other":	48,
+	"visa":	51,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	48,
+	"visa":	51,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	49
+}
+COUNTERS:{
+	"other":	49,
+	"visa":	51,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	49,
+	"visa":	51,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	50
+}
+COUNTERS:{
+	"other":	50,
+	"visa":	51,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=34200)
+
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	50,
+	"visa":	51,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	52
+}
+COUNTERS:{
+	"other":	50,
+	"visa":	52,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	51
+}
+COUNTERS:{
+	"other":	51,
+	"visa":	52,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	51,
+	"visa":	52,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	51,
+	"visa":	52,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	52
+}
+COUNTERS:{
+	"other":	52,
+	"visa":	52,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34202)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	53
+}
+COUNTERS:{
+	"other":	52,
+	"visa":	53,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	52,
+	"visa":	53,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	52,
+	"visa":	53,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	53
+}
+COUNTERS:{
+	"other":	53,
+	"visa":	53,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34204)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	54
+}
+COUNTERS:{
+	"other":	53,
+	"visa":	54,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	53,
+	"visa":	54,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	53,
+	"visa":	54,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	54
+}
+COUNTERS:{
+	"other":	54,
+	"visa":	54,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34206)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	55
+}
+COUNTERS:{
+	"other":	54,
+	"visa":	55,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	54,
+	"visa":	55,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	54,
+	"visa":	55,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	55
+}
+COUNTERS:{
+	"other":	55,
+	"visa":	55,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34208)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	56
+}
+COUNTERS:{
+	"other":	55,
+	"visa":	56,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	55,
+	"visa":	56,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	55,
+	"visa":	56,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=34210)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	57
+}
+COUNTERS:{
+	"other":	55,
+	"visa":	57,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	56
+}
+COUNTERS:{
+	"other":	56,
+	"visa":	57,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	56,
+	"visa":	57,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	56,
+	"visa":	57,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	57
+}
+COUNTERS:{
+	"other":	57,
+	"visa":	57,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34212)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	58
+}
+COUNTERS:{
+	"other":	57,
+	"visa":	58,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	57,
+	"visa":	58,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=34214)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	59
+}
+COUNTERS:{
+	"other":	57,
+	"visa":	59,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=34216)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	60
+}
+COUNTERS:{
+	"other":	57,
+	"visa":	60,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	57,
+	"visa":	60,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	57,
+	"visa":	60,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	57,
+	"visa":	60,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	57,
+	"visa":	60,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	58
+}
+COUNTERS:{
+	"other":	58,
+	"visa":	60,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	59
+}
+COUNTERS:{
+	"other":	59,
+	"visa":	60,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=34218)
+
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	59,
+	"visa":	60,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	61
+}
+COUNTERS:{
+	"other":	59,
+	"visa":	61,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=34220)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	60
+}
+COUNTERS:{
+	"other":	60,
+	"visa":	61,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	60,
+	"visa":	61,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	62
+}
+COUNTERS:{
+	"other":	60,
+	"visa":	62,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	60,
+	"visa":	62,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	60,
+	"visa":	62,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	61
+}
+COUNTERS:{
+	"other":	61,
+	"visa":	62,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	61,
+	"visa":	62,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	62
+}
+COUNTERS:{
+	"other":	62,
+	"visa":	62,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=34222)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	63
+}
+COUNTERS:{
+	"other":	62,
+	"visa":	63,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	62,
+	"visa":	63,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	62,
+	"visa":	63,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	63
+}
+COUNTERS:{
+	"other":	63,
+	"visa":	63,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=34224)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	64
+}
+COUNTERS:{
+	"other":	63,
+	"visa":	64,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	63,
+	"visa":	64,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	63,
+	"visa":	64,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	64
+}
+COUNTERS:{
+	"other":	64,
+	"visa":	64,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34226)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	65
+}
+COUNTERS:{
+	"other":	64,
+	"visa":	65,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	64,
+	"visa":	65,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=34228)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	66
+}
+COUNTERS:{
+	"other":	64,
+	"visa":	66,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	64,
+	"visa":	66,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	64,
+	"visa":	66,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	64,
+	"visa":	66,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	65
+}
+COUNTERS:{
+	"other":	65,
+	"visa":	66,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	66
+}
+COUNTERS:{
+	"other":	66,
+	"visa":	66,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34230)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	67
+}
+COUNTERS:{
+	"other":	66,
+	"visa":	67,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	66,
+	"visa":	67,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	66,
+	"visa":	67,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=34232)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	67
+}
+COUNTERS:{
+	"other":	67,
+	"visa":	67,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	68
+}
+COUNTERS:{
+	"other":	67,
+	"visa":	68,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	67,
+	"visa":	68,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	67,
+	"visa":	68,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34234)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	69
+}
+COUNTERS:{
+	"other":	67,
+	"visa":	69,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	67,
+	"visa":	69,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	67,
+	"visa":	69,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	68
+}
+COUNTERS:{
+	"other":	68,
+	"visa":	69,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	69
+}
+COUNTERS:{
+	"other":	69,
+	"visa":	69,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34236)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	70
+}
+COUNTERS:{
+	"other":	69,
+	"visa":	70,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	69,
+	"visa":	70,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	69,
+	"visa":	70,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	70
+}
+COUNTERS:{
+	"other":	70,
+	"visa":	70,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34238)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	71
+}
+COUNTERS:{
+	"other":	70,
+	"visa":	71,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	70,
+	"visa":	71,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	70,
+	"visa":	71,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	71
+}
+COUNTERS:{
+	"other":	71,
+	"visa":	71,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34240)
+
+Accepted connection on descriptor 8 (host=127.0.0.1, port=34242)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	72
+}
+COUNTERS:{
+	"other":	71,
+	"visa":	72,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	73
+}
+COUNTERS:{
+	"other":	71,
+	"visa":	73,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	71,
+	"visa":	73,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	71,
+	"visa":	73,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	71,
+	"visa":	73,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	71,
+	"visa":	73,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	72
+}
+COUNTERS:{
+	"other":	72,
+	"visa":	73,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	73
+}
+COUNTERS:{
+	"other":	73,
+	"visa":	73,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34244)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	74
+}
+COUNTERS:{
+	"other":	73,
+	"visa":	74,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	73,
+	"visa":	74,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=34246)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	75
+}
+COUNTERS:{
+	"other":	73,
+	"visa":	75,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	73,
+	"visa":	75,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	73,
+	"visa":	75,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	74
+}
+COUNTERS:{
+	"other":	74,
+	"visa":	75,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	74,
+	"visa":	75,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=34248)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	75
+}
+COUNTERS:{
+	"other":	75,
+	"visa":	75,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	76
+}
+COUNTERS:{
+	"other":	75,
+	"visa":	76,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	75,
+	"visa":	76,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34250)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	77
+}
+COUNTERS:{
+	"other":	75,
+	"visa":	77,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=34252)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	78
+}
+COUNTERS:{
+	"other":	75,
+	"visa":	78,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 10 (host=127.0.0.1, port=34254)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	79
+}
+COUNTERS:{
+	"other":	75,
+	"visa":	79,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	75,
+	"visa":	79,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	75,
+	"visa":	79,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	75,
+	"visa":	79,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	75,
+	"visa":	79,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	75,
+	"visa":	79,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	76
+}
+COUNTERS:{
+	"other":	76,
+	"visa":	79,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	76,
+	"visa":	79,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	76,
+	"visa":	79,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	77
+}
+COUNTERS:{
+	"other":	77,
+	"visa":	79,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	78
+}
+COUNTERS:{
+	"other":	78,
+	"visa":	79,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	79
+}
+COUNTERS:{
+	"other":	79,
+	"visa":	79,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=34256)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	80
+}
+COUNTERS:{
+	"other":	79,
+	"visa":	80,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=34258)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:{
+	"visa":	81
+}
+COUNTERS:{
+	"other":	79,
+	"visa":	81,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	79,
+	"visa":	81,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:{
+	"mir":	1
+}
+COUNTERS:{
+	"other":	79,
+	"visa":	81,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	79,
+	"visa":	81,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	80
+}
+COUNTERS:{
+	"other":	80,
+	"visa":	81,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:{
+	"lol":	7
+}
+COUNTERS:{
+	"other":	80,
+	"visa":	81,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:{
+	"other":	81
+}
+COUNTERS:{
+	"other":	81,
+	"visa":	81,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
