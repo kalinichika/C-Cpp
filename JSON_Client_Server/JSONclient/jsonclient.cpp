@@ -53,8 +53,7 @@ void client::Get(std::string sequence) const noexcept(false)
 
 void client::Send( std::string str) const noexcept(false)
 {
-    //std::string str(cJSON_Print(obj));
-
+/*
     int res = send( s, str.c_str(), str.size(), 0 );
     if ( res <= 0 )
     {
@@ -70,7 +69,7 @@ void client::Send( std::string str) const noexcept(false)
         //pLog->Write("\nQuery for Server :\n%s\n", str.c_str());
 #endif
     }
-/*
+*/
     const int l = str.size();
     char length[5];
     sprintf(length,"%d",l);
@@ -82,7 +81,6 @@ void client::Send( std::string str) const noexcept(false)
 #endif
         throw(Bad_C_S_exception("Error Send length"));
     }
-    //sleep(10);
     res = send( s, str.c_str(), l, 0 );
     if ( res <= 0 )
     {
@@ -98,23 +96,23 @@ void client::Send( std::string str) const noexcept(false)
         pLog->Write("\nQuery for Server :\n%s\n", str.c_str());
 #endif
     }
-*/
+
 }
 
 void client::Recv(cJSON* obj) const noexcept(false)
 {
+/*
+    char Buffer[1000];
+    memset(Buffer, 0, 1000);
 
-    char Buffer[10000];
-    memset(Buffer, 0, 10000);
-
-    int res =  recv(s, Buffer, 10000, 0) ;
+    int res =  recv(s, Buffer, 1000, 0) ;
 
     if ( res < 0 )
     {
 #ifdef PRINT_LOG
-        pLog->Write("Error Recv\t | (Client) | ", stime(&lt));
+        pLog->Write("Error Recv Client");
 #endif
-        throw(Bad_C_S_exception("Error Recv"));
+        throw(Bad_C_S_exception("Error Recv Client"));
     }
     else
     {
@@ -123,8 +121,8 @@ void client::Recv(cJSON* obj) const noexcept(false)
         pLog->Write("Client %s:\n%s\n", cJSON_GetObjectItem(obj, "action")->valuestring, Buffer);
 #endif
     }
-/*
-    char length[5] = {0};
+*/
+    char length[4] = {0};
     int res =  recv(s, length, 4, 0);
     const int l = atoi(length);
     if (res<0)
@@ -135,7 +133,7 @@ void client::Recv(cJSON* obj) const noexcept(false)
         throw(Bad_C_S_exception("Error Recv length"));
     }
 
-    char* Buffer = new char[l+1];
+    char* Buffer = new char[l];
     memset(Buffer, 0, l);
 
     res =  recv(s, Buffer, l, 0);
@@ -148,9 +146,10 @@ void client::Recv(cJSON* obj) const noexcept(false)
     }
     else
     {
+        printf("Client %s:\n%s\n", cJSON_GetObjectItem(obj, "action")->valuestring, Buffer);
 #ifdef PRINT_LOG
         pLog->Write("Client %s:\n%s\n", cJSON_GetObjectItem(obj, "action")->valuestring, Buffer);
 #endif
     }
-*/
+
 }
