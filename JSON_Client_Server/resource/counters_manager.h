@@ -23,10 +23,11 @@ private:
 private:
     epoll_event set_Event();
     void set_epoll_wait(const int time_for_wait);
-    int  Accept();
-    void Answer(int);
-    cJSON* Recv(int);
+    //int  Recv_query(const int i, const int length, const int flags, cJSON* query);
+    int  Recv1(const int i, const int size, int* length = nullptr);
+    cJSON* Recv_query(const int i, const int length);
     void Send(int, std::string, int);
+    int  Accept();
     int  Set_NonBlock(int);
     void get_info(int, struct sockaddr in_addr, socklen_t in_len);
     int _epoll_create();

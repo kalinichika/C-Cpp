@@ -3,7 +3,6 @@
 
 #include "/home/student/Projects/JSON_CS/resource/net_resource.h"
 #include "/home/student/Projects/JSON_CS/resource/counters_manager.h"
-#define PRINT_LOG
 namespace JSON_CS
 {
 

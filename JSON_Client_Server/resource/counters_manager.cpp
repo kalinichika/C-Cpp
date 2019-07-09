@@ -20,13 +20,14 @@ epoll_event counters_manager::set_Event()
 {
     struct epoll_event Ev;
     Ev.data.fd = s;
-    Ev.events = EPOLLIN | EPOLLET | EPOLLPRI; // отслеживаем события при доступности на чтение
+    Ev.events = EPOLLIN; // отслеживаем события при доступности на чтение
     return Ev;
 }
 
 void counters_manager::set_epoll_wait(const int time_for_wait)
 {
     int N = 1;
+    int _exit_while = 0;
     while(1)
     {
         // Ожидаем событие
@@ -50,14 +51,72 @@ void counters_manager::set_epoll_wait(const int time_for_wait)
             else if( Events[i].data.fd == s )
             {
                 while(Accept()!=-1)
-                    {
-                        break;
-                    }
+                {
+                    break;
+                }
                 continue;
             }
             else if(Events[i].events & EPOLLIN)
             {
-                Answer(i);
+                cJSON* query = nullptr;
+                counters_view_json obj_json(obj);
+                int length;
+                int size = 4;
+                while(!query && !_exit_while)
+                {
+                    switch ( Recv1(i, size, &length) )
+                    {
+                    case 1:
+                        close(Events[i].data.fd);
+                        _exit_while = 1;
+                        continue;
+                    case 2:
+                    {
+                        sleep(1);
+                        continue;
+                    }
+                    case 3:
+                    {
+                        if ( length <= 0 )
+                        {
+                            close(Events[i].data.fd);
+                            continue;
+                        }
+                        size = length + 4;
+                        continue;
+                    }
+                    case 0:
+                        query = Recv_query(i, length);
+                        size = 4;
+                        continue;
+                    }
+                }
+                if(_exit_while)
+                {
+                    _exit_while = 0;
+                    continue;
+                }
+                if (query)
+                {
+#ifdef PRINT_LOG
+                    pLog->Write("Server Recv:%s",cJSON_Print(query));
+#endif
+                    std::string action = cJSON_GetObjectItem(query, "action")->valuestring;
+                    std::string sequence = cJSON_GetObjectItem(query, "sequence")->valuestring;;
+                    if ( action == "get" )  Send(i, sequence, obj.Get(sequence));
+                    else if( action == "set" )  Send(i, sequence, obj.Set(sequence, cJSON_GetObjectItem(query, "value")->valueint));
+                    obj_json.Update(obj);
+                    obj_json.Print();
+                    cJSON_Delete(query);
+                    query = nullptr;
+                }
+                else
+                {
+                    close(Events[i].data.fd);
+                    cJSON_Delete(query);
+                    query = nullptr;
+                    continue;
+                }
             }
         }
         //if (N==0) return;
@@ -84,89 +143,43 @@ int counters_manager::Accept()
     return 0;
 }
 
-void counters_manager::Answer(int i)
+int counters_manager::Recv1(const int i, const int size, int *length)
 {
-    counters_view_json obj_json(obj);
-    cJSON* query = cJSON_CreateObject();
-    query = Recv(i);
-    if (!query)
+    char Buffer[size];
+    memset(Buffer, 0, size);
+    int res = recv(Events[i].data.fd, Buffer, size, MSG_PEEK );
+    if ( res <= 0 )
     {
-        close(Events[i].data.fd);
-        return;
+        return 1;
     }
-#ifdef PRINT_LOG
-    pLog->Write("Server Recv:%s",cJSON_Print(query));
-#endif
-    std::string action = cJSON_GetObjectItem(query, "action")->valuestring;
-    std::string sequence = cJSON_GetObjectItem(query, "sequence")->valuestring;;
-    if ( action == "get" )
+    else if ( (res<size)&&(res>0) )
     {
-        Send(i, sequence, obj.Get(sequence));
+        return 2;
     }
-    else if( action == "set" )
+    else if ( size == 4 )
     {
-        Send(i, sequence, obj.Set(sequence, cJSON_GetObjectItem(query, "value")->valueint));
+        *length = atoi(Buffer);
+        return 3;
     }
-    obj_json.Update(obj);
-    obj_json.Print();
-    cJSON_Delete(query);
-    query = nullptr;
+    else if ( size > 4 )
+    {
+        return 0;
+    }
+    return res;
 }
 
-cJSON* counters_manager::Recv(int i)
+cJSON* counters_manager::Recv_query(const int i, const int length)
 {
-    char Buffer[1000];
-    memset(Buffer, 0, 1000);
-    int res = recv(Events[i].data.fd, Buffer, 1000, 0);
-    if ( res<0 )
-    {
-#ifdef PRINT_LOG
-        pLog->Write("Error Recv\t | (Server) | \t%s",ctime(&lt));
-#endif
-        throw(Bad_C_S_exception("Error Recv"));
-    }
-    else if ( res == 0 )
-    {
-        close(Events[i].data.fd);
-    }
-    /*
-    char length[5];
-    int res = recv(Events[i].data.fd, length, 4, 0 );
-    const int l = atoi(length);
-    if (l == 0)
-    {
-        query = 0;
-        return;
-    }
-    if ( res < 0 )
-    {
-        close(Events[i].data.fd);
-#ifdef PRINT_LOG
-        pLog->Write("Error Recv length\t | (Server) | \t%s",ctime(&lt));
-#endif
-        throw(Bad_C_S_exception("Error Recv length"));
-    }
+    cJSON* query = cJSON_CreateObject();
+    char l[4];
+    recv(Events[i].data.fd, l, 4, 0);
 
-    sleep(1);
-    char* Buffer = new char[l+1];
-    memset(Buffer, 0, l+1);
-
-    res = recv(Events[i].data.fd, Buffer, l, 0);
-    if (res == 0)
-    {
-        close(Events[i].data.fd);
-    }
-    else if ( res<0 )
-    {
-        perror(" ");
-        close(Events[i].data.fd);
-#ifdef PRINT_LOG
-        pLog->Write("Error Recv\t | (Server) | \t%s",ctime(&lt));
-#endif
-        throw(Bad_C_S_exception("Error Recv"));
-    }
-*/
-    return cJSON_Parse(Buffer);
+    char* Buffer = new char[length];
+    memset(Buffer, 0, length);
+    int res = recv(Events[i].data.fd, Buffer, length, 0);
+    if ( res <= 0 ) close(Events[i].data.fd);
+    else if ( res > 0 ) query = cJSON_Parse(Buffer);
+    return query;
 }
 
 void counters_manager::Send(int i, std::string sequence, int value)
@@ -174,19 +187,19 @@ void counters_manager::Send(int i, std::string sequence, int value)
     cJSON* answ = cJSON_CreateObject();
     cJSON_AddNumberToObject(answ, sequence.c_str(), value);
     const std::string answer(cJSON_Print(answ));
-
+    /*
     int res = send( Events[i].data.fd, answer.c_str(), answer.size(), 0 );
     if ( res <= 0 )
     {
 #ifdef PRINT_LOG
         pLog->Write("Error Send\t | (Server) | \t%s", ctime(&lt));
 #endif
-        throw(Bad_C_S_exception("Error Send"));
+        throw(Bad_C_S_exception("Error Send Server"));
     }
 #ifdef PRINT_LOG
     pLog->Write("Server Send:%s", answer.c_str());
 #endif
-    /*
+*/
     const int l = answer.size();
     char length[5] = {0};
     sprintf(length,"%d",l);
@@ -210,7 +223,7 @@ void counters_manager::Send(int i, std::string sequence, int value)
 #ifdef PRINT_LOG
     pLog->Write("Server Send:%s", answer);
 #endif
-*/
+
     cJSON_Delete(answ);
     answ = nullptr;
 }
