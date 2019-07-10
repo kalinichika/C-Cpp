@@ -10,8 +10,12 @@ namespace JSON_CS{
 
 class counters_manager {
 public:
-    counters_manager(int, const int);
+    counters_manager(const int, const int);
     ~counters_manager();
+    counters_manager(const counters_manager &other) = delete;
+    counters_manager(counters_manager &&other) = delete;
+    counters_manager operator = (const counters_manager &other) = delete;
+    counters_manager operator = (counters_manager &&other) = delete;
 private:
     int s;
     int EPoll;
@@ -23,17 +27,16 @@ private:
 private:
     epoll_event set_Event();
     void set_epoll_wait(const int time_for_wait);
-    //int  Recv_query(const int i, const int length, const int flags, cJSON* query);
     int  Recv1(const int i, const int size, int* length = nullptr);
     cJSON* Recv_query(const int i, const int length);
-    void Send(int, std::string, int);
+    void Send(const int, const std::string, const int);
     int  Accept();
-    int  Set_NonBlock(int);
-    void get_info(int, struct sockaddr in_addr, socklen_t in_len);
+    int  Set_NonBlock(const int);
+    void get_info(const int, const struct sockaddr in_addr, const socklen_t in_len);
     int _epoll_create();
-    int _epoll_ctl(int sock);
-    int  er_epoll_wait(int);
-    int  er_accept(int);
+    int _epoll_ctl(const int sock);
+    int  er_epoll_wait(const int);
+    int  er_accept(const int);
 };
 
 }

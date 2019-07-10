@@ -1,5 +1,4 @@
 #include "jsonserver.h"
-#define PRINT_LOG
 using namespace JSON_CS;
 
 server::server(const unsigned int port, const int time_for_wait) noexcept(false)
@@ -28,7 +27,7 @@ void server::SConnect(const int time_for_wait)
     Listen();
 
     // Все махинации с epoll
-    communication(time_for_wait);
+    Communication(time_for_wait);
 }
 
 void server::Bind() const
@@ -50,7 +49,7 @@ void server::Bind() const
 
 void server::Listen() const
 {
-    if( listen(s, SOMAXCONN) ) // SOMAXCONN - максимальное кол соединений, поддерживаемых системой.
+    if( listen(s, SOMAXCONN) ) // SOMAXCONN - максимальное кол-во соединений, поддерживаемых системой.
     {
 #ifdef PRINT_LOG
         pLog->Write("Error calling Listen\t | (Server) | \t%s",ctime(&lt));
@@ -62,7 +61,7 @@ void server::Listen() const
 #endif
 }
 
-void server::communication(const int time_for_wait){
+void server::Communication(const int time_for_wait){
     counters_manager manager(this->s, time_for_wait);
 }
 

@@ -1,5 +1,4 @@
 #include "jsonbad_client.h"
-//#undef PRINT_LOG
 using namespace JSON_CS;
 
 client::client(const int port) noexcept(false)
@@ -30,7 +29,7 @@ void client::Connect() const noexcept(false)
 #endif
 }
 
-void client::Set(std::string sequence, int value) const noexcept(false)
+void client::Set(const std::string sequence,const int value) const noexcept(false)
 {
     cJSON* obj = cJSON_CreateObject();
     cJSON_AddStringToObject(obj, "action", "set");
@@ -41,7 +40,7 @@ void client::Set(std::string sequence, int value) const noexcept(false)
     cJSON_Delete(obj);
 }
 
-void client::Get(std::string sequence) const noexcept(false)
+void client::Get(const std::string sequence) const noexcept(false)
 {
     cJSON* obj = cJSON_CreateObject();
     cJSON_AddStringToObject(obj, "action", "get");
@@ -51,7 +50,7 @@ void client::Get(std::string sequence) const noexcept(false)
     cJSON_Delete(obj);
 }
 
-void client::Send( std::string str) const noexcept(false)
+void client::Send(const std::string str) const noexcept(false)
 {
     const int l = str.size();
     char length[4];
@@ -77,9 +76,9 @@ void client::Send( std::string str) const noexcept(false)
     }
 }
 
-void client::Recv(cJSON* obj) const noexcept(false)
+void client::Recv(const cJSON* obj) const noexcept(false)
 {
-    char length[5] = {0};
+    char length[4] = {0};
     int res =  recv(s, length, 4, 0);
     const int l = atoi(length);
     if (res<0)
@@ -91,7 +90,7 @@ void client::Recv(cJSON* obj) const noexcept(false)
     }
 
     char* Buffer = new char[l+1];
-    memset(Buffer, 0, l);
+    memset(Buffer, 0, l+1);
 
     res =  recv(s, Buffer, l, 0);
     if (res<0)

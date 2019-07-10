@@ -1,8 +1,7 @@
 #include "/home/student/Projects/JSON_CS/resource/counters_manager.h"
-#define PRINT_LOG
 using namespace JSON_CS;
 
-counters_manager::counters_manager(int sock, const int time_for_wait) : s(sock), EPoll(_epoll_create()), Event(set_Event())
+counters_manager::counters_manager(const int sock, const int time_for_wait) : s(sock), EPoll(_epoll_create()), Event(set_Event())
 {
     // Регистрируем (добавляем дескр в epoll)
     _epoll_ctl(s);
@@ -16,12 +15,40 @@ counters_manager::~counters_manager()
     delete pLog;
 }
 
+int counters_manager::_epoll_create()
+{
+    int e = epoll_create1(0);
+    if( EPoll < 0 )
+    {
+#ifdef PRINT_LOG
+        pLog->Write("Error in epol_create\t | (Server) | \t%s",ctime(&lt));
+#endif
+        throw(Bad_C_S_exception("Error in epoll_create"));
+        return -1;
+    }
+    return e;
+}
+
 epoll_event counters_manager::set_Event()
 {
     struct epoll_event Ev;
     Ev.data.fd = s;
-    Ev.events = EPOLLIN; // отслеживаем события при доступности на чтение
+    Ev.events = EPOLLIN; // отслеживаем события доступные к чтению
     return Ev;
+}
+
+int counters_manager::_epoll_ctl(const int sock)
+{
+    int e = epoll_ctl(EPoll, EPOLL_CTL_ADD, sock, &Event);
+    if ( e < 0 )
+    {
+#ifdef PRINT_LOG
+        pLog->Write("Error in epol_ctl\t | (Server) | \t%s",ctime(&lt));
+#endif
+        throw(Bad_C_S_exception("Error in epoll_ctl"));
+        return -1;
+    }
+    return 0;
 }
 
 void counters_manager::set_epoll_wait(const int time_for_wait)
@@ -123,6 +150,19 @@ void counters_manager::set_epoll_wait(const int time_for_wait)
     }
 }
 
+int counters_manager::er_epoll_wait(const int N)
+{
+    if( N < 0 )
+    {
+#ifdef PRINT_LOG
+        pLog->Write("Error in epol_wait\t | (Server) | \t%s",ctime(&lt));
+#endif
+        throw(Bad_C_S_exception("Error in epoll_wait"));
+        return -1;
+    }
+    return 0;
+}
+
 int counters_manager::Accept()
 {
     struct sockaddr in_addr;
@@ -141,6 +181,41 @@ int counters_manager::Accept()
     Event.events = EPOLLIN | EPOLLET;
     _epoll_ctl(new_s);
     return 0;
+}
+
+int counters_manager::er_accept(const int new_s){
+    if( new_s < 0 )
+    {
+        if ((errno == EAGAIN) ||(errno == EWOULDBLOCK))
+        {
+#ifdef PRINT_LOG
+            //pLog->Write("processed all incoming connections.\t | (Server) | \t%s",ctime(&lt));
+#endif
+            //printf ("processed all incoming connections.\n");
+            //return -1;
+        }
+        else if((errno == EMFILE))
+        {
+            perror("EMFILE ");
+#ifdef PRINT_LOG
+            pLog->Write("Error calling Accept\t | (Server) | \t%s", ctime(&lt));
+#endif
+            throw(Bad_C_S_exception("Error calling accept"));
+            return -1;
+        }
+        else
+        {
+#ifdef PRINT_LOG
+            pLog->Write("Error calling Accept\t | (Server) | \t%s", ctime(&lt));
+#endif
+            throw(Bad_C_S_exception("Error calling accept"));
+            return -1;
+        }
+    }
+    return 0;
+#ifdef PRINT_LOG
+    //pLog->Write("Accept\t\t | (Server) | \t%s",ctime(&lt));
+#endif
 }
 
 int counters_manager::Recv1(const int i, const int size, int *length)
@@ -182,7 +257,7 @@ cJSON* counters_manager::Recv_query(const int i, const int length)
     return query;
 }
 
-void counters_manager::Send(int i, std::string sequence, int value)
+void counters_manager::Send(const int i, const std::string sequence, int value)
 {
     cJSON* answ = cJSON_CreateObject();
     cJSON_AddNumberToObject(answ, sequence.c_str(), value);
@@ -221,14 +296,14 @@ void counters_manager::Send(int i, std::string sequence, int value)
         throw(Bad_C_S_exception("Error Send 1"));
     }
 #ifdef PRINT_LOG
-    pLog->Write("Server Send:%s", answer);
+    pLog->Write("Server Send:\n%s", answer.c_str());
 #endif
 
     cJSON_Delete(answ);
     answ = nullptr;
 }
 
-int counters_manager::Set_NonBlock(int sfd)
+int counters_manager::Set_NonBlock(const int sfd)
 {
     int flags;
 #ifdef O_NONBLOCK
@@ -243,7 +318,7 @@ int counters_manager::Set_NonBlock(int sfd)
 #endif
 }
 
-void counters_manager::get_info(int new_s, struct sockaddr in_addr, socklen_t in_len)
+void counters_manager::get_info(const int new_s, const struct sockaddr in_addr, const socklen_t in_len)
 {
     char hbuf[NI_MAXHOST], sbuf[NI_MAXSERV];
     int x = getnameinfo (&in_addr, in_len,
@@ -259,78 +334,4 @@ void counters_manager::get_info(int new_s, struct sockaddr in_addr, socklen_t in
     }
 }
 
-int counters_manager::_epoll_create()
-{
-    int e = epoll_create1(0);
-    if( EPoll < 0 )
-    {
-#ifdef PRINT_LOG
-        pLog->Write("Error in epol_create\t | (Server) | \t%s",ctime(&lt));
-#endif
-        throw(Bad_C_S_exception("Error in epoll_create"));
-        return -1;
-    }
-    return e;
-}
 
-int counters_manager::_epoll_ctl(int sock)
-{
-    int e = epoll_ctl(EPoll, EPOLL_CTL_ADD, sock, &Event);
-    if ( e < 0 )
-    {
-#ifdef PRINT_LOG
-        pLog->Write("Error in epol_ctl\t | (Server) | \t%s",ctime(&lt));
-#endif
-        throw(Bad_C_S_exception("Error in epoll_ctl"));
-        return -1;
-    }
-    return 0;
-}
-
-int counters_manager::er_epoll_wait(int N)
-{
-    if( N < 0 )
-    {
-#ifdef PRINT_LOG
-        pLog->Write("Error in epol_wait\t | (Server) | \t%s",ctime(&lt));
-#endif
-        throw(Bad_C_S_exception("Error in epoll_wait"));
-        return -1;
-    }
-    return 0;
-}
-
-int counters_manager::er_accept(int new_s){
-    if( new_s < 0 )
-    {
-        if ((errno == EAGAIN) ||(errno == EWOULDBLOCK))
-        {
-#ifdef PRINT_LOG
-            //pLog->Write("processed all incoming connections.\t | (Server) | \t%s",ctime(&lt));
-#endif
-            //printf ("processed all incoming connections.\n");
-            //return -1;
-        }
-        else if((errno == EMFILE))
-        {
-            perror("EMFILE ");
-#ifdef PRINT_LOG
-            pLog->Write("Error calling Accept\t | (Server) | \t%s", ctime(&lt));
-#endif
-            throw(Bad_C_S_exception("Error calling accept"));
-            return -1;
-        }
-        else
-        {
-#ifdef PRINT_LOG
-            pLog->Write("Error calling Accept\t | (Server) | \t%s", ctime(&lt));
-#endif
-            throw(Bad_C_S_exception("Error calling accept"));
-            return -1;
-        }
-    }
-    return 0;
-#ifdef PRINT_LOG
-    //pLog->Write("Accept\t\t | (Server) | \t%s",ctime(&lt));
-#endif
-}

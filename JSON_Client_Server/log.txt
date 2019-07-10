@@ -1,15 +1,19 @@
-Bind		 | (Server) | 	Tue Jul  9 23:37:22 2019
+Bind		 | (Server) | 	Wed Jul 10 10:48:06 2019
 
-Listen		 | (Server) | 	Tue Jul  9 23:37:22 2019
+Listen		 | (Server) | 	Wed Jul 10 10:48:06 2019
 
-Accepted connection on descriptor 7 (host=127.0.0.1, port=33380)
+Accepted connection on descriptor 7 (host=127.0.0.1, port=47366)
 
 Server Recv:{
 	"action":	"get",
 	"sequence":	"visa"
 }
-Server Send:0yv÷þ
-COUNTERS:{
+Server Send:
+{
+	"visa":	1
+}
+COUNTERS:
+{
 	"maestro":	0,
 	"mir":	0,
 	"mastercard":	0,
@@ -20,8 +24,12 @@ Server Recv:{
 	"sequence":	"mir",
 	"value":	1
 }
-Server Send:0yv÷þ
-COUNTERS:{
+Server Send:
+{
+	"mir":	1
+}
+COUNTERS:
+{
 	"maestro":	0,
 	"mir":	1,
 	"mastercard":	0,
@@ -32,8 +40,12 @@ Server Recv:{
 	"sequence":	"lol",
 	"value":	7
 }
-Server Send:0yv÷þ
-COUNTERS:{
+Server Send:
+{
+	"lol":	7
+}
+COUNTERS:
+{
 	"visa":	1,
 	"mastercard":	0,
 	"lol":	7,
@@ -44,122 +56,14 @@ Server Recv:{
 	"action":	"get",
 	"sequence":	"other"
 }
-Server Send:0yv÷þ
-COUNTERS:{
+Server Send:
+{
+	"other":	1
+}
+COUNTERS:
+{
 	"other":	1,
 	"visa":	1,
-	"mastercard":	0,
-	"lol":	7,
-	"mir":	1,
-	"maestro":	0
-}
-Accepted connection on descriptor 7 (host=127.0.0.1, port=33382)
-
-Server Recv:{
-	"action":	"get",
-	"sequence":	"visa"
-}
-Server Send:0yv÷þ
-COUNTERS:{
-	"other":	1,
-	"visa":	2,
-	"mastercard":	0,
-	"lol":	7,
-	"mir":	1,
-	"maestro":	0
-}
-Server Recv:{
-	"action":	"set",
-	"sequence":	"mir",
-	"value":	1
-}
-Server Send:0yv÷þ
-COUNTERS:{
-	"other":	1,
-	"visa":	2,
-	"mastercard":	0,
-	"lol":	7,
-	"mir":	1,
-	"maestro":	0
-}
-Server Recv:{
-	"action":	"set",
-	"sequence":	"lol",
-	"value":	7
-}
-Server Send:0yv÷þ
-COUNTERS:{
-	"other":	1,
-	"visa":	2,
-	"mastercard":	0,
-	"lol":	7,
-	"mir":	1,
-	"maestro":	0
-}
-Server Recv:{
-	"action":	"get",
-	"sequence":	"other"
-}
-Server Send:0yv÷þ
-COUNTERS:{
-	"other":	2,
-	"visa":	2,
-	"mastercard":	0,
-	"lol":	7,
-	"mir":	1,
-	"maestro":	0
-}
-Accepted connection on descriptor 7 (host=127.0.0.1, port=33384)
-
-Server Recv:{
-	"action":	"get",
-	"sequence":	"visa"
-}
-Server Send:0yv÷þ
-COUNTERS:{
-	"other":	2,
-	"visa":	3,
-	"mastercard":	0,
-	"lol":	7,
-	"mir":	1,
-	"maestro":	0
-}
-Server Recv:{
-	"action":	"set",
-	"sequence":	"mir",
-	"value":	1
-}
-Server Send:0yv÷þ
-COUNTERS:{
-	"other":	2,
-	"visa":	3,
-	"mastercard":	0,
-	"lol":	7,
-	"mir":	1,
-	"maestro":	0
-}
-Server Recv:{
-	"action":	"set",
-	"sequence":	"lol",
-	"value":	7
-}
-Server Send:0yv÷þ
-COUNTERS:{
-	"other":	2,
-	"visa":	3,
-	"mastercard":	0,
-	"lol":	7,
-	"mir":	1,
-	"maestro":	0
-}
-Server Recv:{
-	"action":	"get",
-	"sequence":	"other"
-}
-Server Send:0yv÷þ
-COUNTERS:{
-	"other":	3,
-	"visa":	3,
 	"mastercard":	0,
 	"lol":	7,
 	"mir":	1,

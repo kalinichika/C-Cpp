@@ -9,18 +9,13 @@ counters::counters()
     m["mastercard"] = 0;
 }
 
-counters::~counters()
-{
-
-}
-
-int counters::Set(std::string str, int value)
+int counters::Set(const std::string str, const int value) noexcept
 {
     m[str] = value;
     return m[str];
 }
 
-int counters::Get(std::string str)
+int counters::Get(const std::string str) noexcept
 {
     if (m.count(str)) ( m[str] )++;
     else m[str] = 1;
