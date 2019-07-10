@@ -12,7 +12,7 @@
 
 namespace JSON_CS
 {
-
+/* Класс для логирования*/
     class Log
     {
     public:
@@ -20,7 +20,6 @@ namespace JSON_CS
         ~Log();
         void Write(const char* LogLine, ...);
     private:
-        std::string FileName;
         std::ofstream m_stream;
     };
 

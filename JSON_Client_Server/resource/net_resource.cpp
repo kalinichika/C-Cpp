@@ -24,7 +24,7 @@ sockaddr_in net_resource::SockAddr(const unsigned int port)
     return sa;
 }
 
-int net_resource::Set_NonBlock(int sfd)
+int net_resource::Set_NonBlock(const int sfd)
 {
     int flags;
     #ifdef O_NONBLOCK

@@ -7,6 +7,9 @@
 #define LogFileName "/home/student/Projects/JSON_CS/log.txt"
 namespace JSON_CS
 {
+/* Класс счетчиков в формате JSON:
+ * Update -  вызывается после изменений в counters и соотвующим образом изменяет объект JSON
+ * Print  -  вывод в файл лога счетчиков в формате JSON */
 class counters_view_json{
 public:
     counters_view_json(const counters obj);

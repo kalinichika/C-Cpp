@@ -4,6 +4,9 @@
 #include <unordered_map>
 namespace JSON_CS
 {
+/* Класс счетчиков (создается в counters_manager):
+ * Set -  устанавливает значение счетчика в указанное значение
+ * Get -  увеличивает значение счетчика на 1 с каждым запросом */
 class counters{
 public:
     counters();

@@ -1,8 +1,8 @@
-Bind		 | (Server) | 	Wed Jul 10 10:48:06 2019
+Bind		 | (Server) | 	Wed Jul 10 11:40:49 2019
 
-Listen		 | (Server) | 	Wed Jul 10 10:48:06 2019
+Listen		 | (Server) | 	Wed Jul 10 11:40:49 2019
 
-Accepted connection on descriptor 7 (host=127.0.0.1, port=47366)
+Accepted connection on descriptor 7 (host=127.0.0.1, port=47374)
 
 Server Recv:{
 	"action":	"get",
@@ -64,6 +64,78 @@ COUNTERS:
 {
 	"other":	1,
 	"visa":	1,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=47376)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	2
+}
+COUNTERS:
+{
+	"other":	1,
+	"visa":	2,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"mir",
+	"value":	1
+}
+Server Send:
+{
+	"mir":	1
+}
+COUNTERS:
+{
+	"other":	1,
+	"visa":	2,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"set",
+	"sequence":	"lol",
+	"value":	7
+}
+Server Send:
+{
+	"lol":	7
+}
+COUNTERS:
+{
+	"other":	1,
+	"visa":	2,
+	"mastercard":	0,
+	"lol":	7,
+	"mir":	1,
+	"maestro":	0
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"other"
+}
+Server Send:
+{
+	"other":	2
+}
+COUNTERS:
+{
+	"other":	2,
+	"visa":	2,
 	"mastercard":	0,
 	"lol":	7,
 	"mir":	1,

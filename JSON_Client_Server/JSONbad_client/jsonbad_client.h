@@ -5,7 +5,11 @@
 
 namespace JSON_CS
 {
-
+/* Класс плохой клиент (возможны аналогичные атаки):
+ * Set -  устанавливает на сервере значение счетчика в указанное значение
+ * Get -  запрашивает у сервера значение счетчика
+ * Send - отправка ПО БАЙТАМ запроса на сервер в формате JSON (длина, запрос)
+ * Recv - получение ответа от сервера в формате JSON */
 class client : public net_resource
 {
 public:
@@ -22,7 +26,6 @@ private:
     client operator = (const client &other) = delete;
     client operator = (client &&other) = delete;
 };
-
 }
 
 #endif // JSONCLIENT_H
