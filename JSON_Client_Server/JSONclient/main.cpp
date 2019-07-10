@@ -8,9 +8,9 @@ int main()
     try{
         JSON_CS::client Client(12345);
         Client.Get("visa");
-        Client.Set("mir",1);
-        Client.Set("lol",7);
-        Client.Get("other");
+        //Client.Set("mir",1);
+        //Client.Set("lol",7);
+        //Client.Get("other");
     }
     catch(JSON_CS::Bad_C_S_exception &error)
     {

@@ -125,6 +125,9 @@ void counters_manager::set_epoll_wait(const int time_for_wait)
                 }
                 if (query)
                 {
+#ifdef PRINT_CONS
+                    printf("Server Recv:\n%s\n",cJSON_Print(query));
+#endif
 #ifdef PRINT_LOG
                     pLog->Write("Server Recv:%s",cJSON_Print(query));
 #endif
@@ -286,7 +289,6 @@ void counters_manager::Send(const int i, const std::string sequence, int value)
 #endif
         throw(Bad_C_S_exception("Error Send"));
     }
-    //sleep(10);
     res = send( Events[i].data.fd, answer.c_str(), l, 0 );
     if ( res <= 0 )
     {
@@ -295,6 +297,9 @@ void counters_manager::Send(const int i, const std::string sequence, int value)
 #endif
         throw(Bad_C_S_exception("Error Send 1"));
     }
+#ifdef PRINT_CONS
+    printf("Server Send:\n%s\n",answer.c_str());
+#endif
 #ifdef PRINT_LOG
     pLog->Write("Server Send:\n%s", answer.c_str());
 #endif

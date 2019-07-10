@@ -1,6 +1,7 @@
 #ifndef JSONCLIENT_H
 #define JSONCLIENT_H
 #undef PRINT_LOG
+#undef PRINT_CONS
 #include "/home/student/Projects/JSON_CS/resource/net_resource.h"
 
 namespace JSON_CS
@@ -20,7 +21,7 @@ public:
     void Get(const std::string) const noexcept(false);
 private:
     void Send(const std::string) const noexcept(false);
-    void Recv(const cJSON*) const noexcept(false);
+    void Recv() const noexcept(false);
     client(const client &other) = delete;
     client(client &other) = delete;
     client operator = (const client &other) = delete;

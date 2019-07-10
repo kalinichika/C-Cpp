@@ -1,6 +1,7 @@
 #ifndef JSONCLIENT_H
 #define JSONCLIENT_H
 #undef PRINT_LOG
+#undef PRINT_CONS
 #include "/home/student/Projects/JSON_CS/resource/net_resource.h"
 
 namespace JSON_CS

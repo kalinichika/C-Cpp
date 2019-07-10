@@ -36,7 +36,7 @@ void client::Set(const std::string sequence,const int value) const noexcept(fals
     cJSON_AddStringToObject(obj, "sequence", sequence.c_str());
     cJSON_AddNumberToObject(obj, "value", value);
     Send(cJSON_Print(obj));
-    Recv(obj);
+    Recv();
     cJSON_Delete(obj);
 }
 
@@ -46,7 +46,7 @@ void client::Get(const std::string sequence) const noexcept(false)
     cJSON_AddStringToObject(obj, "action", "get");
     cJSON_AddStringToObject(obj,  "sequence", sequence.c_str());
     Send(cJSON_Print(obj));
-    Recv(obj);
+    Recv();
     cJSON_Delete(obj);
 }
 
@@ -72,11 +72,13 @@ void client::Send(const std::string str) const noexcept(false)
         }
     }
     {
+#ifdef PRINT_CONS
         printf("\nQuery for Server :\n%s\n", str.c_str());
+#endif
     }
 }
 
-void client::Recv(const cJSON* obj) const noexcept(false)
+void client::Recv() const noexcept(false)
 {
     char length[4] = {0};
     int res =  recv(s, length, 4, 0);
@@ -102,7 +104,9 @@ void client::Recv(const cJSON* obj) const noexcept(false)
     }
     else
     {
+#ifdef PRINT_CONS
         printf("Client %s:\n%s\n", cJSON_GetObjectItem(obj, "action")->valuestring, Buffer);
+#endif
 #ifdef PRINT_LOG
         pLog->Write("Client %s:\n%s\n", cJSON_GetObjectItem(obj, "action")->valuestring, Buffer);
 #endif

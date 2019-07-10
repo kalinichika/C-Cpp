@@ -1,8 +1,10 @@
-Bind		 | (Server) | 	Wed Jul 10 11:40:49 2019
+Bind		 | (Server) | 	Wed Jul 10 12:07:04 2019
 
-Listen		 | (Server) | 	Wed Jul 10 11:40:49 2019
+Listen		 | (Server) | 	Wed Jul 10 12:07:04 2019
 
-Accepted connection on descriptor 7 (host=127.0.0.1, port=47374)
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48712)
+
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48714)
 
 Server Recv:{
 	"action":	"get",
@@ -19,57 +21,7 @@ COUNTERS:
 	"mastercard":	0,
 	"visa":	1
 }
-Server Recv:{
-	"action":	"set",
-	"sequence":	"mir",
-	"value":	1
-}
-Server Send:
-{
-	"mir":	1
-}
-COUNTERS:
-{
-	"maestro":	0,
-	"mir":	1,
-	"mastercard":	0,
-	"visa":	1
-}
-Server Recv:{
-	"action":	"set",
-	"sequence":	"lol",
-	"value":	7
-}
-Server Send:
-{
-	"lol":	7
-}
-COUNTERS:
-{
-	"visa":	1,
-	"mastercard":	0,
-	"lol":	7,
-	"mir":	1,
-	"maestro":	0
-}
-Server Recv:{
-	"action":	"get",
-	"sequence":	"other"
-}
-Server Send:
-{
-	"other":	1
-}
-COUNTERS:
-{
-	"other":	1,
-	"visa":	1,
-	"mastercard":	0,
-	"lol":	7,
-	"mir":	1,
-	"maestro":	0
-}
-Accepted connection on descriptor 7 (host=127.0.0.1, port=47376)
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48716)
 
 Server Recv:{
 	"action":	"get",
@@ -81,63 +33,3253 @@ Server Send:
 }
 COUNTERS:
 {
-	"other":	1,
-	"visa":	2,
+	"maestro":	0,
+	"mir":	0,
 	"mastercard":	0,
-	"lol":	7,
-	"mir":	1,
-	"maestro":	0
+	"visa":	2
 }
+Accepted connection on descriptor 10 (host=127.0.0.1, port=48718)
+
 Server Recv:{
-	"action":	"set",
-	"sequence":	"mir",
-	"value":	1
+	"action":	"get",
+	"sequence":	"visa"
 }
 Server Send:
 {
-	"mir":	1
+	"visa":	3
 }
 COUNTERS:
 {
-	"other":	1,
-	"visa":	2,
+	"maestro":	0,
+	"mir":	0,
 	"mastercard":	0,
-	"lol":	7,
-	"mir":	1,
-	"maestro":	0
-}
-Server Recv:{
-	"action":	"set",
-	"sequence":	"lol",
-	"value":	7
-}
-Server Send:
-{
-	"lol":	7
-}
-COUNTERS:
-{
-	"other":	1,
-	"visa":	2,
-	"mastercard":	0,
-	"lol":	7,
-	"mir":	1,
-	"maestro":	0
+	"visa":	3
 }
 Server Recv:{
 	"action":	"get",
-	"sequence":	"other"
+	"sequence":	"visa"
 }
 Server Send:
 {
-	"other":	2
+	"visa":	4
 }
 COUNTERS:
 {
-	"other":	2,
-	"visa":	2,
+	"maestro":	0,
+	"mir":	0,
 	"mastercard":	0,
-	"lol":	7,
-	"mir":	1,
-	"maestro":	0
+	"visa":	4
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48720)
+
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48722)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	5
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	5
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48724)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	6
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	6
+}
+Accepted connection on descriptor 11 (host=127.0.0.1, port=48726)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	7
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	7
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48730)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	8
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	8
+}
+Accepted connection on descriptor 10 (host=127.0.0.1, port=48732)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	9
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	9
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	10
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	10
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48734)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	11
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	11
+}
+Accepted connection on descriptor 12 (host=127.0.0.1, port=48736)
+
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48738)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	12
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	12
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48740)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	13
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	13
+}
+Accepted connection on descriptor 10 (host=127.0.0.1, port=48742)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	14
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	14
+}
+Accepted connection on descriptor 11 (host=127.0.0.1, port=48744)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	15
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	15
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48746)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	16
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	16
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48748)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	17
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	17
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48750)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	18
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	18
+}
+Accepted connection on descriptor 10 (host=127.0.0.1, port=48752)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	19
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	19
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48754)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	20
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	20
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48756)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	21
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	21
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48758)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	22
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	22
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48760)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	23
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	23
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48762)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	24
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	24
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48764)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	25
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	25
+}
+Accepted connection on descriptor 10 (host=127.0.0.1, port=48766)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	26
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	26
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48768)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	27
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	27
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48770)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	28
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	28
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48772)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	29
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	29
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48774)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	30
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	30
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48776)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	31
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	31
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48778)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	32
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	32
+}
+Accepted connection on descriptor 10 (host=127.0.0.1, port=48780)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	33
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	33
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48782)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	34
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	34
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48784)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	35
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	35
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48786)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	36
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	36
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48788)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	37
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	37
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48790)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	38
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	38
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48792)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	39
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	39
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48794)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	40
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	40
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48796)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	41
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	41
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48798)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	42
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	42
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48800)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	43
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	43
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48802)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	44
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	44
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48804)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	45
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	45
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48806)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	46
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	46
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48808)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	47
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	47
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48810)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	48
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	48
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48812)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	49
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	49
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48814)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	50
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	50
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48816)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	51
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	51
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48818)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	52
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	52
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48820)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	53
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	53
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48822)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	54
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	54
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48824)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	55
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	55
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48826)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	56
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	56
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48828)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	57
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	57
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48830)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	58
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	58
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48832)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	59
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	59
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48834)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	60
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	60
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48836)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	61
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	61
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48838)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	62
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	62
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48840)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	63
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	63
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48842)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	64
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	64
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48844)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	65
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	65
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48846)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	66
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	66
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48848)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	67
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	67
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48850)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	68
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	68
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48852)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	69
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	69
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48854)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	70
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	70
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48856)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	71
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	71
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48858)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	72
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	72
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48860)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	73
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	73
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48862)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	74
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	74
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48864)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	75
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	75
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48866)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	76
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	76
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48868)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	77
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	77
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48870)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	78
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	78
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48872)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	79
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	79
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48874)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	80
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	80
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48876)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	81
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	81
+}
+Accepted connection on descriptor 10 (host=127.0.0.1, port=48878)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	82
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	82
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48880)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	83
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	83
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	84
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	84
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48882)
+
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48884)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	85
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	85
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48886)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	86
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	86
+}
+Accepted connection on descriptor 10 (host=127.0.0.1, port=48888)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	87
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	87
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	88
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	88
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48890)
+
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48892)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	89
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	89
+}
+Accepted connection on descriptor 10 (host=127.0.0.1, port=48894)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	90
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	90
+}
+Accepted connection on descriptor 11 (host=127.0.0.1, port=48896)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	91
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	91
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48898)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	92
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	92
+}
+Accepted connection on descriptor 12 (host=127.0.0.1, port=48900)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	93
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	93
+}
+Accepted connection on descriptor 13 (host=127.0.0.1, port=48902)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	94
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	94
+}
+Accepted connection on descriptor 14 (host=127.0.0.1, port=48904)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	95
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	95
+}
+Accepted connection on descriptor 15 (host=127.0.0.1, port=48906)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	96
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	96
+}
+Accepted connection on descriptor 12 (host=127.0.0.1, port=48908)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	97
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	97
+}
+Accepted connection on descriptor 16 (host=127.0.0.1, port=48910)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	98
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	98
+}
+Accepted connection on descriptor 17 (host=127.0.0.1, port=48912)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	99
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	99
+}
+Accepted connection on descriptor 12 (host=127.0.0.1, port=48914)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	100
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	100
+}
+Accepted connection on descriptor 18 (host=127.0.0.1, port=48916)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	101
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	101
+}
+Accepted connection on descriptor 19 (host=127.0.0.1, port=48918)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	102
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	102
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48920)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	103
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	103
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48922)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	104
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	104
+}
+Accepted connection on descriptor 10 (host=127.0.0.1, port=48924)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	105
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	105
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48926)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	106
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	106
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48928)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	107
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	107
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48930)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	108
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	108
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48932)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	109
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	109
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48934)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	110
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	110
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48936)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	111
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	111
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48938)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	112
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	112
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48940)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	113
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	113
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48942)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	114
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	114
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48944)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	115
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	115
+}
+Accepted connection on descriptor 10 (host=127.0.0.1, port=48946)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	116
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	116
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48948)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	117
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	117
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48950)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	118
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	118
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48952)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	119
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	119
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48954)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	120
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	120
+}
+Accepted connection on descriptor 10 (host=127.0.0.1, port=48956)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	121
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	121
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48958)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	122
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	122
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48960)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	123
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	123
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48962)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	124
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	124
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48964)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	125
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	125
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48966)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	126
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	126
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48968)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	127
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	127
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48970)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	128
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	128
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48972)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	129
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	129
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48974)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	130
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	130
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48976)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	131
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	131
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48978)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	132
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	132
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48980)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	133
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	133
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48982)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	134
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	134
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48984)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	135
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	135
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48986)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	136
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	136
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48988)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	137
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	137
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48990)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	138
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	138
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48992)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	139
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	139
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=48994)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	140
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	140
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=48996)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	141
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	141
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=48998)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	142
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	142
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=49000)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	143
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	143
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=49002)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	144
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	144
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=49004)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	145
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	145
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=49006)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	146
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	146
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=49008)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	147
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	147
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=49010)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	148
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	148
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=49012)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	149
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	149
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=49014)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	150
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	150
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=49016)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	151
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	151
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=49018)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	152
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	152
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=49020)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	153
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	153
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=49022)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	154
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	154
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=49024)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	155
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	155
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=49026)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	156
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	156
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=49028)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	157
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	157
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=49030)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	158
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	158
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=49032)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	159
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	159
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=49034)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	160
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	160
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=49036)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	161
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	161
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=49038)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	162
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	162
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=49040)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	163
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	163
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=49042)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	164
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	164
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=49044)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	165
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	165
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=49046)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	166
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	166
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=49048)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	167
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	167
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=49050)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	168
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	168
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=49052)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	169
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	169
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=49054)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	170
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	170
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=49056)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	171
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	171
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=49058)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	172
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	172
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=49060)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	173
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	173
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=49062)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	174
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	174
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=49064)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	175
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	175
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=49066)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	176
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	176
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=49068)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	177
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	177
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=49070)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	178
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	178
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=49072)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	179
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	179
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=49074)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	180
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	180
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=49076)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	181
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	181
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=49078)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	182
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	182
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=49080)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	183
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	183
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=49082)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	184
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	184
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=49084)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	185
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	185
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=49086)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	186
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	186
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=49088)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	187
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	187
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=49090)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	188
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	188
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=49092)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	189
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	189
+}
+Accepted connection on descriptor 9 (host=127.0.0.1, port=49094)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	190
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	190
+}
+Accepted connection on descriptor 7 (host=127.0.0.1, port=49096)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	191
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	191
+}
+Accepted connection on descriptor 8 (host=127.0.0.1, port=49098)
+
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	192
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	192
+}
+Server Recv:{
+	"action":	"get",
+	"sequence":	"visa"
+}
+Server Send:
+{
+	"visa":	193
+}
+COUNTERS:
+{
+	"maestro":	0,
+	"mir":	0,
+	"mastercard":	0,
+	"visa":	193
 }

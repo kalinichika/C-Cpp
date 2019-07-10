@@ -5,6 +5,7 @@
 #include "counters.h"
 #include "counters_view_json.h"
 #define PRINT_LOG
+#undef PRINT_CONS
 #define MAX_EVENTS 10000
 namespace JSON_CS{
 /* Класс  * для обеспечения параллельной работы с клиентами

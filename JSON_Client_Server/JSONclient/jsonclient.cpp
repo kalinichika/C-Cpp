@@ -91,7 +91,9 @@ void client::Send(const std::string str) const noexcept(false)
     }
     else
     {
+#ifdef PRINT_CONS
         printf("\nQuery for Server :\n%s\n", str.c_str());
+#endif
 #ifdef PRINT_LOG
         pLog->Write("\nQuery for Server :\n%s\n", str.c_str());
 #endif
@@ -117,7 +119,9 @@ void client::Recv(const cJSON* obj) const noexcept(false)
     }
     else
     {
+#ifdef PRINT_CONS
         printf("Client %s:\n%s\n", cJSON_GetObjectItem(obj, "action")->valuestring, Buffer);
+#endif
 #ifdef PRINT_LOG
         pLog->Write("Client %s:\n%s\n", cJSON_GetObjectItem(obj, "action")->valuestring, Buffer);
 #endif
@@ -147,7 +151,9 @@ void client::Recv(const cJSON* obj) const noexcept(false)
     }
     else
     {
+#ifdef PRINT_CONS
         printf("Client %s:\n%s\n", cJSON_GetObjectItem(obj, "action")->valuestring, Buffer);
+#endif
 #ifdef PRINT_LOG
         pLog->Write("Client %s:\n%s\n", cJSON_GetObjectItem(obj, "action")->valuestring, Buffer);
 #endif
